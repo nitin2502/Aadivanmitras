@@ -21,9 +21,9 @@ public class Thanedlc
 	    driver.set(new ChromeDriver());
 	    driver().manage().window().maximize();
 		driver().navigate().to("http://trti.mahamining.com/home");
-		 Thread.sleep(2000);
+		 Thread.sleep(1000);
 		 driver().findElement(By.xpath("//*[@id=\"home_login\"]")).click();
-		Thread .sleep(3000);
+		Thread .sleep(1000);
 	//Thane DlC login
 	driver().findElement(By.xpath("//*[@id=\"login\"]/div/div/div[2]/form/div/div[1]/div/input")).sendKeys("ThaneDLC");		  
 	Thread .sleep(1000);
@@ -35,7 +35,7 @@ public class Thanedlc
 	      Thread .sleep(1000);
 	    
 	  	driver().findElement(By.xpath("//*[@id=\"login\"]/div/div/div[2]/form/div/div[5]/button")).click();
-	  	Thread .sleep(3000);
+	  	Thread .sleep(1000);
 	    
 	  
 		 // System.setProperty("webdriver.gecko.driver","C:\\Users\\niting\\eclipse-workspace\\Mavenutility\\src\\main\\resources\\drivers\\geckodriver\\geckodriver.exe");

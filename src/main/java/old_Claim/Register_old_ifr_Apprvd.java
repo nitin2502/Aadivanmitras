@@ -32,7 +32,7 @@ public class Register_old_ifr_Apprvd extends Thanedlc
     driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[1]/div[3]/div/ngx-select/div/ngx-select-choices/ul/li[2]/a/span")).click();
     Thread.sleep(2000);
   //select claim no
-    driver().findElement(By.xpath("//input[@placeholder='Claim No']")).sendKeys("260/-NG");
+    driver().findElement(By.xpath("//input[@placeholder='Claim No']")).sendKeys("Claimno14");
     Thread.sleep(2000);
     driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[1]/div[4]/div/div/button")).click();
     Thread.sleep(2000);
@@ -71,7 +71,7 @@ public class Register_old_ifr_Apprvd extends Thanedlc
     // enter aDDRESS
     driver().findElement(By.xpath("//textarea[@placeholder='Enter Address']")).sendKeys("Swarget , pune. pin-413209   rejected due to ducument 75(a), 75(B ) not updated ");  
     Thread .sleep(2000); 
-    // basic details
+    // basic details                                       
     //Claimant name
     driver().findElement(By.xpath("//input[@placeholder='Claimant Name (English)']")).sendKeys("dhondiba");  
     Thread .sleep(2000); 
@@ -161,7 +161,7 @@ public class Register_old_ifr_Apprvd extends Thanedlc
       Thread .sleep(3000);
       driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[5]/div[1]/div[1]/div/div[2]/div/ngx-select/div/ngx-select-choices/ul/li[2]/a/span")).click();  
        Thread .sleep(3000);
-       
+                          
   //compartment no
       driver().findElement(By.xpath("//input[@placeholder='Compartment No']")).sendKeys("4444");  
       Thread .sleep(2000);
@@ -209,7 +209,7 @@ public class Register_old_ifr_Apprvd extends Thanedlc
       //click on claim list
       driver().findElement(By.xpath("//*[@id=\"collapse1\"]/div/ul/li[3]/a")).click();  
       Thread .sleep(2000);
-      driver().findElement(By.xpath("//input[@placeholder='Enter Claimant Name/Claim No.']")).sendKeys("260/-NG");  
+      driver().findElement(By.xpath("//input[@placeholder='Enter Claimant Name/Claim No.']")).sendKeys("Claimno14");  
       Thread .sleep(3000);
       driver().findElement(By.xpath("//*[@id=\"content\"]/app-old-ifr-claim-list/div/div/div/div/div/div[1]/form/div/div[8]/div/button")).click();  
       Thread .sleep(2000);
@@ -220,8 +220,9 @@ public class Register_old_ifr_Apprvd extends Thanedlc
       Screenshot k= new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver());
 
   	ImageIO.write(k.getImage(), "png", new File("C:\\Users\\niting\\eclipse-workspace\\Aadivanmitras\\Screenshot\\RegisterOld01.png"));
-      
-      
+     Thread .sleep(2000);
+   // close thhe driver
+  	 driver().close();
       
   }
   

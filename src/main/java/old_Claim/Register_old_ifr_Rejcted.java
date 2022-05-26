@@ -32,23 +32,16 @@ public class Register_old_ifr_Rejcted extends Thanedlc
     driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[1]/div[3]/div/ngx-select/div/ngx-select-choices/ul/li[2]/a/span")).click();
     Thread.sleep(2000);
   //select claim no
-    driver().findElement(By.xpath("//input[@placeholder='Claim No']")).sendKeys("261/-NG");
+    driver().findElement(By.xpath("//input[@placeholder='Claim No']")).sendKeys("261/NG");
     Thread.sleep(2000);
     driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[1]/div[4]/div/div/button")).click();
     Thread.sleep(2000);
-    //radio seleaction
-    driver().findElement(By.id("roCWH1")).click();
-    Thread.sleep(2000);
-    driver().findElement(By.id("roNCNP1")).click();
-    Thread.sleep(2000);
-    driver().findElement(By.id("roPESA1")).click();
-    Thread.sleep(2000);
-   
+ 
     //CLAIM DATE
-    driver().findElement(By.xpath("//input[@placeholder='Claim Date']")).sendKeys("12-05-2022");  
+    driver().findElement(By.xpath("//input[@placeholder='Claim Date']")).sendKeys("12-05-2020");  
     Thread .sleep(2000);  
     // Rej  date
-    driver().findElement(By.xpath("//input[@placeholder='Rejection Date']")).sendKeys("12-09-2023");  
+    driver().findElement(By.xpath("//input[@placeholder='Rejection Date']")).sendKeys("12-09-2021");  
     Thread .sleep(2000); 
     //Rejected at committe level
     driver().findElement(By.xpath("//ngx-select[@placeholder='Select Committee Level']")).click();  
@@ -60,6 +53,13 @@ public class Register_old_ifr_Rejcted extends Thanedlc
     Thread .sleep(2000);
     driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[1]/div[8]/div/div/ngx-select/div/ngx-select-choices/ul/li[3]/a/span")).click();  
     Thread .sleep(2000);
+    //radio seleaction
+    driver().findElement(By.id("roCWH1")).click();
+    Thread.sleep(2000);
+    driver().findElement(By.id("roNCNP1")).click();
+    Thread.sleep(2000);
+    driver().findElement(By.id("roPESA1")).click();
+    Thread.sleep(2000);
     //area details
     driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[2]/div[4]/div/ngx-select/div/div[2]/div/span[1]/span")).click();
     Thread.sleep(2000);
@@ -223,7 +223,7 @@ public class Register_old_ifr_Rejcted extends Thanedlc
       //click on claim list
       driver().findElement(By.xpath("//*[@id=\"collapse1\"]/div/ul/li[3]/a")).click();  
       Thread .sleep(2000);
-      driver().findElement(By.xpath("//input[@placeholder='Enter Claimant Name/Claim No.']")).sendKeys("261/-NG");  
+      driver().findElement(By.xpath("//input[@placeholder='Enter Claimant Name/Claim No.']")).sendKeys("261/NG");  
       Thread .sleep(3000);
       driver().findElement(By.xpath("//*[@id=\"content\"]/app-old-ifr-claim-list/div/div/div/div/div/div[1]/form/div/div[8]/div/button")).click();  
       Thread .sleep(2000);
@@ -235,7 +235,9 @@ public class Register_old_ifr_Rejcted extends Thanedlc
 
   	ImageIO.write(k.getImage(), "png", new File("C:\\Users\\niting\\eclipse-workspace\\Aadivanmitras\\Screenshot\\RegisterOld01.png"));
       
-      
+    Thread .sleep(2000);
+    // close thhe driver
+   	 driver().close();
       
   }
   
