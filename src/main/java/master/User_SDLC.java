@@ -110,7 +110,7 @@ public class User_SDLC {
 		Thread .sleep(3000);
 		// takes screenshot
 		 File  scr =((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-			Files.copy(scr, new File("C:\\Users\\niting\\eclipse-workspace\\Aadivanmitras\\Screenshot\\UserSdlc01.png"));
+			Files.copy(scr, new File("C:\\Users\\niting\\eclipse-workspace\\Aadivanmitras\\Screenshot\\UserSdlc03.png"));
 		// browser close
 			 Thread .sleep(3000);
 		  driver.close();   

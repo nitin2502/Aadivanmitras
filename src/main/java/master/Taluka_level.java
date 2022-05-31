@@ -73,7 +73,7 @@ public class Taluka_level {
 				driver.findElement(By.xpath("//input[@placeholder='Enter Mobile No']")).sendKeys("8545564555");
 				driver.findElement(By.xpath("//input[@placeholder='Enter Email']")).sendKeys("abvgvgcd2508@gmail.com");
 				Thread .sleep(1000);	
-				driver.findElement(By.xpath("//input[@placeholder='Enter User Name']")).sendKeys("Tal963");
+				driver.findElement(By.xpath("//input[@placeholder='Enter User Name']")).sendKeys("Tal9634");
 				Thread .sleep(1000);	
 				driver.findElement(By.xpath("//*[@id=\"content\"]/app-user-register/div[1]/div/div/div/div[1]/form/div/div/div[1]/div/div[11]/div/div/button")).click();
 				Thread .sleep(1000);	
@@ -89,11 +89,11 @@ public class Taluka_level {
 				//clear record
 				driver.findElement(By.xpath("//input[@placeholder='Enter Mobile No']")).clear();
 				Thread .sleep(1000);
-				driver.findElement(By.xpath("//input[@placeholder='Enter Mobile No']")).sendKeys("9730554444");
+				driver.findElement(By.xpath("//input[@placeholder='Enter Mobile No']")).sendKeys("9730554400");
 				Thread .sleep(1000);
 				driver.findElement(By.xpath("//input[@placeholder='Enter Email']")).clear();
 				Thread .sleep(1000);
-				driver.findElement(By.xpath("//input[@placeholder='Enter Email']")).sendKeys("ggggghhg@gmail.com");
+				driver.findElement(By.xpath("//input[@placeholder='Enter Email']")).sendKeys("romg@gmail.com");
 				Thread .sleep(1000);
 				driver.findElement(By.xpath("//*[@id=\"content\"]/app-user-register/div[1]/div/div/div/div[1]/form/div/div/div[2]/button[2]")).click();
 				Thread .sleep(1000);
@@ -105,7 +105,7 @@ public class Taluka_level {
 				// takes screenshot
 				//only mobNo change user register from can accept all details
 				File  scr =((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-			    Files.copy(scr, new File("C:\\Users\\niting\\eclipse-workspace\\Aadivanmitras\\Screenshot\\Taluka01.png"));
+			    Files.copy(scr, new File("C:\\Users\\niting\\eclipse-workspace\\Aadivanmitras\\Screenshot\\Taluka03.png"));
 		
 		// browser close
 		 Thread .sleep(2000);

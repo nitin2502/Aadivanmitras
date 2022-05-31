@@ -36,7 +36,7 @@ public class Panchayat {
      Thread .sleep(1000);
    
  	driver.findElement(By.xpath("//*[@id=\"login\"]/div/div/div[2]/form/div/div[5]/button")).click();
- 	Thread .sleep(1000);
+ 	Thread .sleep(3000);
    //click on master
 	driver.findElement(By.xpath("//*[@id=\"heading1\"]/button/div/div[2]")).click();
 		//click on panchayat

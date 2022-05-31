@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="old_Claim.Old_IFR_claim_uploaddocumnt">
+      <class name="old_Claim.Claimno">
         <methods>
-          <include name="Uploadold"/>
+          <include name="Registerold"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- old_Claim.Old_IFR_claim_uploaddocumnt -->
+      </class> <!-- old_Claim.Claimno -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

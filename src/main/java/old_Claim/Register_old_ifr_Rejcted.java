@@ -17,6 +17,7 @@ public class Register_old_ifr_Rejcted extends Thanedlc
   @Test()
   public void Registerold() throws Exception
   {  // click on old ifr regi
+	  Thread.sleep(3000);
     driver().findElement(By.xpath("//*[@id=\"heading1\"]/button/div/div[2]")).click();
     Thread.sleep(2000);
     driver().findElement(By.xpath("//*[@id=\"collapse1\"]/div/ul/li[1]/a")).click();
@@ -32,7 +33,7 @@ public class Register_old_ifr_Rejcted extends Thanedlc
     driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[1]/div[3]/div/ngx-select/div/ngx-select-choices/ul/li[2]/a/span")).click();
     Thread.sleep(2000);
   //select claim no
-    driver().findElement(By.xpath("//input[@placeholder='Claim No']")).sendKeys("261/NG");
+    driver().findElement(By.xpath("//input[@placeholder='Claim No']")).sendKeys("abc/455");
     Thread.sleep(2000);
     driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[1]/div[4]/div/div/button")).click();
     Thread.sleep(2000);
@@ -84,7 +85,7 @@ public class Register_old_ifr_Rejcted extends Thanedlc
     driver().findElement(By.xpath("//input[@placeholder='Enter Pada']")).sendKeys("vasepur");  
     Thread .sleep(2000); 
     // enter aDDRESS
-    driver().findElement(By.xpath("//input[@placeholder='Enter Address']")).sendKeys("Swarget , pune. pin-413209   rejected due to ducument 75(a), 75(B ) not updated ");  
+    driver().findElement(By.xpath("//textarea[@placeholder='Enter Address']")).sendKeys("Swarget , pune. pin-413209   rejected due to ducument 75(a), 75(B ) not updated ");  
     Thread .sleep(2000); 
     // basic details
     //Claimant name
@@ -100,7 +101,7 @@ public class Register_old_ifr_Rejcted extends Thanedlc
     driver().findElement(By.id("gender1")).click();  
     Thread .sleep(2000); 
   //dateof birth    
-    driver().findElement(By.xpath("//input[@placeholder='Date of Birth']")).sendKeys("12-05-2022");  
+    driver().findElement(By.xpath("//input[@placeholder='Date of Birth']")).sendKeys("12-05-2017");  
     Thread .sleep(2000);  
    //mob no
     driver().findElement(By.id("mobile_id")).sendKeys("9638521590");  
@@ -181,19 +182,19 @@ public class Register_old_ifr_Rejcted extends Thanedlc
       //urvey no / gat no 
       driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[5]/div[2]/div/div/div[2]/div/input")).sendKeys("123/A,125/b");  
       Thread .sleep(2000);   
-      driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[6]/div/div/div[2]/div/input")).sendKeys("50");  
+      driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[6]/div/div/div[2]/div/input")).sendKeys("4");  
       Thread .sleep(2000);
-      driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[7]/div/div/div[2]/div/div/input")).sendKeys("45");  
+      driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[7]/div/div/div[2]/div/div/input")).sendKeys("3");  
       Thread .sleep(2000);
-      driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[8]/div/div/div[2]/div/div/input")).sendKeys("43.4");  
+      driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[8]/div/div/div[2]/div/div/input")).sendKeys("2");  
       Thread .sleep(2000);
-      driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[9]/div/div/div[2]/div/div/input")).sendKeys("42.0");  
+      driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[9]/div/div/div[2]/div/div/input")).sendKeys("1");  
       Thread .sleep(2000);
-      driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[10]/div/div/div[2]/div/div/input")).sendKeys("41");  
+      driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[10]/div/div/div[2]/div/div/input")).sendKeys("0");  
       Thread .sleep(2000);
-      driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[11]/div/div/div[2]/div/div/input")).sendKeys("40.0");  
+      driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[11]/div/div/div[2]/div/div/input")).sendKeys("2.1");  
       Thread .sleep(2000);
-      driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[12]/div/div/div[2]/div/div/input")).sendKeys("38.9");  
+      driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[12]/div/div/div[2]/div/div/input")).sendKeys("3.3");  
       Thread .sleep(2000);
       //Boundary of Claimed Space
       driver().findElement(By.xpath("//input[@placeholder='To The East']")).sendKeys("123");  
@@ -209,7 +210,7 @@ public class Register_old_ifr_Rejcted extends Thanedlc
       driver().findElement(By.xpath("//textarea[@placeholder='Remark']")).sendKeys("rejected due to ducument 75(a), 75(B ) not updated.");  
       Thread .sleep(2000);
       //remark2
-      driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[15]/div/div/textarea")).sendKeys("spacenotaccepterrorfound");  
+      driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[15]/div/textarea")).sendKeys("spacenotaccepterrorfound");  
       Thread .sleep(2000);
       
       // create case
@@ -223,17 +224,23 @@ public class Register_old_ifr_Rejcted extends Thanedlc
       //click on claim list
       driver().findElement(By.xpath("//*[@id=\"collapse1\"]/div/ul/li[3]/a")).click();  
       Thread .sleep(2000);
-      driver().findElement(By.xpath("//input[@placeholder='Enter Claimant Name/Claim No.']")).sendKeys("261/NG");  
+      driver().findElement(By.xpath("//input[@placeholder='Enter Claimant Name/Claim No.']")).sendKeys("abc/455");  
       Thread .sleep(3000);
       driver().findElement(By.xpath("//*[@id=\"content\"]/app-old-ifr-claim-list/div/div/div/div/div/div[1]/form/div/div[8]/div/button")).click();  
       Thread .sleep(2000);
       driver().findElement(By.xpath("//a[@class='btn btn-light rounded ng-star-inserted']")).click();  
       Thread .sleep(30000);
       
+      //click on preview button
+      driver().findElement(By.xpath("//*[@id=\"content\"]/app-create-case-details/div[1]/div/div[2]/div/a/button")).click();  
+      Thread .sleep(20000);
+      //click on download button
+      driver().findElement(By.xpath("//*[@id=\"content\"]/app-print-ifr-claim/div/div/div[2]/button")).click();  
+      Thread .sleep(10000);
    
       Screenshot k= new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver());
 
-  	ImageIO.write(k.getImage(), "png", new File("C:\\Users\\niting\\eclipse-workspace\\Aadivanmitras\\Screenshot\\RegisterOld01.png"));
+  	ImageIO.write(k.getImage(), "png", new File("C:\\Users\\niting\\eclipse-workspace\\Aadivanmitras\\Screenshot\\RegisterOld02.png"));
       
     Thread .sleep(2000);
     // close thhe driver
