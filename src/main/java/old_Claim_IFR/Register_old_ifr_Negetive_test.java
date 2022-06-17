@@ -1,4 +1,4 @@
-package old_Claim;
+package old_Claim_IFR;
 
 import java.io.File;
 
@@ -18,7 +18,25 @@ public class Register_old_ifr_Negetive_test extends Thanedlc
   public void Registerold() throws Exception
   
      
-  { 
+  {  //9. selecting same claim no
+	  // click on old ifr regi
+	    driver().findElement(By.xpath("//*[@id=\"heading1\"]/button/div/div[2]")).click();
+	    Thread.sleep(2000);
+	    driver().findElement(By.xpath("//*[@id=\"collapse1\"]/div/ul/li[1]/a")).click();
+	    Thread.sleep(2000);  
+	    
+	  //select claim no
+	    driver().findElement(By.xpath("//input[@placeholder='Claim No']")).sendKeys("8513/ba");
+	    Thread.sleep(3000);
+	 
+        driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[1]/div[4]/div/div/button")).click();
+        Thread.sleep(4000);
+	    
+	      // create case
+	      driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[14]/div/button")).click();  
+	      Thread .sleep(3000);
+	      driver().navigate().refresh();
+	
 	  Thread.sleep(3000);
 	  // click on old ifr regi
     driver().findElement(By.xpath("//*[@id=\"heading1\"]/button/div/div[2]")).click();
@@ -115,13 +133,13 @@ public class Register_old_ifr_Negetive_test extends Thanedlc
         driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[12]/div/div/div[2]/div/div/input")).sendKeys("5.6");  
         Thread .sleep(2000);
           // create case
-          driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[14]/div/button")).click();  
-          Thread .sleep(3000);
-      
-          //4.test
-          driver().navigate().refresh();
+        driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[14]/div/button")).click();  
+        Thread .sleep(3000);
+ 
+         //4.test 
+         driver().navigate().refresh();
           
-          //Boundary of Claimed Space
+         //Boundary of Claimed Space
           driver().findElement(By.xpath("//input[@placeholder='To The East']")).sendKeys("");  
           Thread .sleep(2000); 
           driver().findElement(By.xpath("//input[@placeholder='To The West']")).sendKeys("");  
@@ -133,8 +151,59 @@ public class Register_old_ifr_Negetive_test extends Thanedlc
             // create case
             driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[14]/div/button")).click();  
             Thread .sleep(3000);
-  
-         //5.test
+            driver().navigate().refresh(); 
+            //5.test
+
+            //martial status
+               //unmarried
+               driver().findElement(By.id("maritalstatus2")).click();  
+               Thread .sleep(4000);
+               //click on married
+               driver().findElement(By.id("maritalstatus1")).click();  
+               Thread .sleep(2000);
+              //spouse name 
+               driver().findElement(By.xpath("//input[@placeholder='Spouse Name']")).sendKeys("Laxmi");  
+               Thread .sleep(2000);
+               //spousecategory
+               driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[3]/div[13]/div/ngx-select/div/div[2]/div")).click();  
+               Thread .sleep(3000);
+               driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[3]/div[13]/div/ngx-select/div/ngx-select-choices/ul/li[4]/a/span")).click();  
+               Thread .sleep(3000);
+             //spouse  caste
+               driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[3]/div[14]/div/ngx-select/div/div[2]/div/span[1]/span")).click();  
+               Thread .sleep(3000);
+               driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[3]/div[14]/div/ngx-select/div/ngx-select-choices/ul/li[9]/a/span")).click();  
+                Thread .sleep(3000);
+             
+                // create case
+                driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[14]/div/button")).click();  
+                Thread .sleep(3000);
+                driver().navigate().refresh(); 
+                
+         
+              //7.test App/rejected selection
+
+          	  Thread.sleep(3000);
+          	  // click on old ifr regi
+              driver().findElement(By.xpath("//*[@id=\"heading1\"]/button/div/div[2]")).click();
+              Thread.sleep(2000);
+              driver().findElement(By.xpath("//*[@id=\"collapse1\"]/div/ul/li[1]/a")).click();
+              Thread.sleep(2000); 
+              //Select claim status Approved
+              driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[1]/div[2]/div/ngx-select/div/div[2]/div/span[1]/span")).click();
+              Thread.sleep(2000); 
+              driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[1]/div[2]/div/ngx-select/div/ngx-select-choices/ul/li[2]/a/span")).click();
+              Thread.sleep(4000);
+              //Select claim status Rejcted
+              
+              driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[1]/div[2]/div/ngx-select/div/div[2]/div/span[1]/span")).click();
+              Thread.sleep(2000); 
+              driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[1]/div[2]/div/ngx-select/div/ngx-select-choices/ul/li[3]/a/span")).click();
+              Thread.sleep(4000);
+              driver().navigate().refresh(); 
+          
+         
+         //9.test  Diff claim no
             driver().navigate().refresh(); 
             driver().findElement(By.xpath("//input[@placeholder='Claim No']")).sendKeys("11111");
             Thread.sleep(2000);
@@ -145,7 +214,7 @@ public class Register_old_ifr_Negetive_test extends Thanedlc
               driver().navigate().refresh();
               driver().findElement(By.xpath("//input[@placeholder='Claim No']")).sendKeys("00011115555555555555");
               Thread.sleep(2000);
-            
+           
               driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[1]/div[4]/div/div/button")).click();
               Thread.sleep(4000);
               driver().navigate().refresh();
@@ -159,11 +228,12 @@ public class Register_old_ifr_Negetive_test extends Thanedlc
               driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[1]/div[4]/div/div/button")).click();
               Thread.sleep(2000);
               driver().navigate().refresh();
-            
+  
               driver().close();
+              //
               
+          
   }
   
-
-  
+ 
 }

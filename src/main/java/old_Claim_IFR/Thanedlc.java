@@ -1,4 +1,4 @@
-package old_Claim;
+package old_Claim_IFR;
 
 import javax.swing.JOptionPane;
 
@@ -58,7 +58,7 @@ public class Thanedlc
 	 {
 		 return driver.get();
 	 }
-	    // @AfterMethod
+	   //  @AfterMethod
 	     public void teardown() 
 	     {  
 	    	 driver().quit();
@@ -68,4 +68,8 @@ public class Thanedlc
 		
 	
 	
+
+
+
+
 

@@ -1,4 +1,4 @@
-package old_Claim;
+package old_Claim_IFR;
 
 import java.io.File;
 
@@ -18,9 +18,9 @@ public class Upload_old_IFR_Claim extends Thanedlc
   public void Uploadold() throws Exception
   {  
 	//click on old IFR 
-	  driver().findElement(By.xpath("/html/body/app-root/app-layout/div/app-sidebar/nav/app-admin-menu/div/div[2]/h2/button/div/div[2]")).click();
+	  driver().findElement(By.xpath("//*[@id=\"heading2\"]/button/div/div[2]")).click();
 	  Thread .sleep(1000);
-	  driver().findElement(By.xpath("//*[@id=\"collapse1\"]/div/ul/li[2]/a")).click();
+	  driver().findElement(By.xpath("//*[@id=\"collapse2\"]/div/ul/li[2]/a")).click();
 	  Thread .sleep(1000);
 	  driver().navigate().refresh();
 	  driver().findElement(By.xpath("//*[@id=\"content\"]/app-upload-old-ifr-claims/div[1]/div/div/div/div/div[1]/div/div[2]/button/i")).click();
@@ -36,9 +36,8 @@ public class Upload_old_IFR_Claim extends Thanedlc
 	  driver().findElement(By.xpath("//*[@id=\"UploadModal\"]/div/div/div[3]/button[2]")).click();
 	  Thread .sleep(5000);
 	 
-	  
-	  
-	  
+ 
+  
   }
   
 

@@ -1,10 +1,11 @@
-package old_Claim;
+package old_Claim_IFR;
 
 import java.io.File;
 
 import javax.imageio.ImageIO;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
 import ru.yandex.qatools.ashot.AShot;
@@ -38,10 +39,10 @@ public class Register_old_ifr_Apprvd extends Thanedlc
     driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[1]/div[3]/div/ngx-select/div/ngx-select-choices/ul/li[3]/a/span")).click();
     Thread.sleep(2000);
   //select claim no
-    driver().findElement(By.xpath("//input[@placeholder='Claim No']")).sendKeys("11111");
+    driver().findElement(By.xpath("//input[@placeholder='Claim No']")).sendKeys("85/ba");
     Thread.sleep(2000);
     driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[1]/div[4]/div/div/button")).click();
-    Thread.sleep(2000);
+    Thread.sleep(3000);
     driver().findElement(By.xpath("//input[@placeholder='Claim Date']")).sendKeys("12-05-2020");  
     Thread .sleep(2000); 
     //radio seleaction
@@ -82,7 +83,7 @@ public class Register_old_ifr_Apprvd extends Thanedlc
     driver().findElement(By.xpath("//input[@placeholder='Claimant Name (English)']")).sendKeys("dhondiba");  
     Thread .sleep(2000); 
     //Claimant name(marathi)
-    driver().findElement(By.xpath("//input[@placeholder='Claimant Name (Marathi)']")).sendKeys("dhondiba");
+    driver().findElement(By.xpath("//input[@placeholder='Claimant Name (Marathi)']")).sendKeys("सौमना�?ज");
     
     
     //father name
@@ -205,7 +206,7 @@ public class Register_old_ifr_Apprvd extends Thanedlc
       //survey no / gat no 
       driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[5]/div[2]/div/div/div[2]/div/input")).sendKeys("123/A,125/b");  
       Thread .sleep(2000);   
-      driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[6]/div/div/div[2]/div/input")).sendKeys("4");  
+      driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[6]/div/div/div[2]/div/input")).sendKeys("0.0001");  
       Thread .sleep(2000);
       driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[7]/div/div/div[2]/div/div/input")).sendKeys("3");  
       Thread .sleep(2000);
@@ -235,7 +236,7 @@ public class Register_old_ifr_Apprvd extends Thanedlc
       Thread .sleep(2000);
       
       // create case
-      driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[14]/div/button")).click();  
+      driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[15]/div/button")).click();  
       Thread .sleep(2000);
       driver().findElement(By.xpath("//*[@id=\"ConfirmModal\"]/div/div/div[2]/button[2]")).click();  
       Thread .sleep(2000);
@@ -245,14 +246,13 @@ public class Register_old_ifr_Apprvd extends Thanedlc
       //click on claim list
       driver().findElement(By.xpath("//*[@id=\"collapse1\"]/div/ul/li[3]/a")).click();  
       Thread .sleep(2000);
-      driver().findElement(By.xpath("//input[@placeholder='Enter Claimant Name/Claim No.']")).sendKeys("11111");  
+      driver().findElement(By.xpath("//input[@placeholder='Enter Claimant Name/Claim No.']")).sendKeys("85/ba");  
       Thread .sleep(3000);
       driver().findElement(By.xpath("//*[@id=\"content\"]/app-old-ifr-claim-list/div/div/div/div/div/div[1]/form/div/div[8]/div/button")).click();  
       Thread .sleep(2000);
       driver().findElement(By.xpath("//a[@class='btn btn-light rounded ng-star-inserted']")).click();  
       Thread .sleep(30000);
-      
-   
+       
       Screenshot k= new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver());
 
   	ImageIO.write(k.getImage(), "png", new File("C:\\Users\\niting\\eclipse-workspace\\Aadivanmitras\\Screenshot\\RegisterOld06.png"));

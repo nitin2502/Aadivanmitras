@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-31T16:42:34 IST" name="Default suite" finished-at="2022-05-31T16:43:43 IST" duration-ms="68856">
+  <suite started-at="2022-06-17T15:43:43 IST" name="Default suite" finished-at="2022-06-17T15:46:23 IST" duration-ms="159927">
     <groups>
     </groups>
-    <test started-at="2022-05-31T16:42:34 IST" name="Default test" finished-at="2022-05-31T16:43:43 IST" duration-ms="68856">
-      <class name="old_Claim.Areadetails">
-        <test-method is-config="true" signature="setup()[pri:0, instance:old_Claim.Areadetails@6cd28fa7]" started-at="2022-05-31T16:42:34 IST" name="setup" finished-at="2022-05-31T16:43:15 IST" duration-ms="41196" status="PASS">
+    <test started-at="2022-06-17T15:43:43 IST" name="Default test" finished-at="2022-06-17T15:46:23 IST" duration-ms="159927">
+      <class name="old_Claim_CFR.Register_old_cfr_Negetive_test">
+        <test-method is-config="true" signature="setup()[pri:0, instance:old_Claim_CFR.Register_old_cfr_Negetive_test@1e04fa0a]" started-at="2022-06-17T15:43:43 IST" name="setup" finished-at="2022-06-17T15:44:08 IST" duration-ms="24861" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="Registerold()[pri:0, instance:old_Claim.Areadetails@6cd28fa7]" started-at="2022-05-31T16:43:15 IST" name="Registerold" finished-at="2022-05-31T16:43:43 IST" duration-ms="27625" status="PASS">
+        <test-method signature="Registerold()[pri:0, instance:old_Claim_CFR.Register_old_cfr_Negetive_test@1e04fa0a]" started-at="2022-06-17T15:44:08 IST" name="Registerold" finished-at="2022-06-17T15:46:23 IST" duration-ms="135030" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Registerold -->
-      </class> <!-- old_Claim.Areadetails -->
+      </class> <!-- old_Claim_CFR.Register_old_cfr_Negetive_test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

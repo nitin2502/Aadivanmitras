@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="old_Claim.Claimno">
+      <class name="old_Claim_CFR.Register_old_cfr_Negetive_test">
         <methods>
-          <include name="Registerold"/>
           <include name="setup"/>
+          <include name="Registerold"/>
         </methods>
-      </class> <!-- old_Claim.Claimno -->
+      </class> <!-- old_Claim_CFR.Register_old_cfr_Negetive_test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
