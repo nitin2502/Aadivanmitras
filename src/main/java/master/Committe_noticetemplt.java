@@ -21,12 +21,11 @@ public class Committe_noticetemplt {
     driver.get("http://trti.mahamining.com/login");
 	driver.manage().window().maximize();
 	// Admin login
-	driver.findElement(By.xpath("//*[@id=\"home_login\"]")).click();
-	Thread .sleep(1000);	
-	driver.findElement(By.xpath("//*[@id=\"login\"]/div/div/div[2]/form/div/div[1]/div/input")).sendKeys("admin");
-   Thread .sleep(1000);
-	driver.findElement(By.xpath("//*[@id=\"login\"]/div/div/div[2]/form/div/div[2]/div/div/input")).sendKeys("admin");
-    Thread .sleep(1000);	
+	
+	driver.findElement(By.xpath("//input[@placeholder='User Name']")).sendKeys("admin");		  
+	Thread .sleep(1000);
+	driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("admin");		  
+	Thread .sleep(1000);
     String s=JOptionPane.showInputDialog("enter your captcha");
     
   	driver.findElement(By.xpath("//input[@placeholder='Enter Captcha']")).sendKeys(s);

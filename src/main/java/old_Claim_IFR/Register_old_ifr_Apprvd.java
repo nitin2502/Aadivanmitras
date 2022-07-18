@@ -39,11 +39,11 @@ public class Register_old_ifr_Apprvd extends Thanedlc
     driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[1]/div[3]/div/ngx-select/div/ngx-select-choices/ul/li[3]/a/span")).click();
     Thread.sleep(2000);
   //select claim no
-    driver().findElement(By.xpath("//input[@placeholder='Claim No']")).sendKeys("85/ba");
+    driver().findElement(By.xpath("//input[@placeholder='Claim No']")).sendKeys("507/ba");
     Thread.sleep(2000);
     driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[1]/div[4]/div/div/button")).click();
     Thread.sleep(3000);
-    driver().findElement(By.xpath("//input[@placeholder='Claim Date']")).sendKeys("12-05-2020");  
+    driver().findElement(By.xpath("//input[@placeholder='Claim Date']")).sendKeys("04/07/2010");  
     Thread .sleep(2000); 
     //radio seleaction
     driver().findElement(By.id("roCWH1")).click();
@@ -83,8 +83,8 @@ public class Register_old_ifr_Apprvd extends Thanedlc
     driver().findElement(By.xpath("//input[@placeholder='Claimant Name (English)']")).sendKeys("dhondiba");  
     Thread .sleep(2000); 
     //Claimant name(marathi)
-    driver().findElement(By.xpath("//input[@placeholder='Claimant Name (Marathi)']")).sendKeys("सौमना�?ज");
-    
+    driver().findElement(By.xpath("//input[@placeholder='Claimant Name (Marathi)']")).sendKeys("सौमनाज");
+   
     
     //father name
     Thread .sleep(2000); 
@@ -94,7 +94,7 @@ public class Register_old_ifr_Apprvd extends Thanedlc
     driver().findElement(By.id("gender1")).click();  
     Thread .sleep(2000); 
   //dateof birth    
-    driver().findElement(By.xpath("//input[@placeholder='Date of Birth']")).sendKeys("12-05-2019");  
+    driver().findElement(By.xpath("//input[@placeholder='Date of Birth']")).sendKeys("12/10/1995");  
     Thread .sleep(2000);  
    //mob no
     driver().findElement(By.id("mobile_id")).sendKeys("9638521590");  
@@ -246,7 +246,7 @@ public class Register_old_ifr_Apprvd extends Thanedlc
       //click on claim list
       driver().findElement(By.xpath("//*[@id=\"collapse1\"]/div/ul/li[3]/a")).click();  
       Thread .sleep(2000);
-      driver().findElement(By.xpath("//input[@placeholder='Enter Claimant Name/Claim No.']")).sendKeys("85/ba");  
+      driver().findElement(By.xpath("//input[@placeholder='Enter Claimant Name/Claim No.']")).sendKeys("507/ba");  
       Thread .sleep(3000);
       driver().findElement(By.xpath("//*[@id=\"content\"]/app-old-ifr-claim-list/div/div/div/div/div/div[1]/form/div/div[8]/div/button")).click();  
       Thread .sleep(2000);

@@ -14,11 +14,11 @@ import com.google.common.io.Files;
 
 public class CasteN {
 	public static void main(String[] args) throws InterruptedException, IOException    {
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\niting\\Downloads\\chromedriver_win32 (1)\\crom_drvr-2\\chromedriver.exe\\");
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\niting\\eclipse-workspace\\Aadivanmitras\\Driver\\chromedriver.exe");
 	    WebDriver driver= new ChromeDriver();
 	    driver.get("http://trti.mahamining.com/login");
 		driver.manage().window().maximize();
-		driver.findElement(By.xpath("//*[@id=\"home_login\"]")).click();
+		
 		//admin login
 		Thread .sleep(1000);	
 		driver.findElement(By.xpath("//*[@id=\"login\"]/div/div/div[2]/form/div/div[1]/div/input")).sendKeys("admin");

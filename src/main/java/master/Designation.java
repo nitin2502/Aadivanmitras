@@ -22,8 +22,6 @@ public class Designation {
 	    driver.get("http://trti.mahamining.com/login");
 		driver.manage().window().maximize();
 		Thread .sleep(1000);
-		driver.findElement(By.xpath("//*[@id=\"home_login\"]")).click();
-		Thread .sleep(1000);
 		//Admin login
 		driver.findElement(By.xpath("//*[@id=\"login\"]/div/div/div[2]/form/div/div[1]/div/input")).sendKeys("admin");
 	   Thread .sleep(1000);

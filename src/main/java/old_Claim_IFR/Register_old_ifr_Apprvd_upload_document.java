@@ -43,7 +43,7 @@ public class Register_old_ifr_Apprvd_upload_document extends Thanedlc
     Thread.sleep(2000);
     driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[1]/div[4]/div/div/button")).click();
     Thread.sleep(3000);
-    driver().findElement(By.xpath("//input[@placeholder='Claim Date']")).sendKeys("12-05-2020");  
+    driver().findElement(By.xpath("//input[@placeholder='Claim Date']")).sendKeys("12/05/2020");  
     Thread .sleep(2000); 
     //radio seleaction
     driver().findElement(By.id("roCWH1")).click();
@@ -83,7 +83,7 @@ public class Register_old_ifr_Apprvd_upload_document extends Thanedlc
     driver().findElement(By.xpath("//input[@placeholder='Claimant Name (English)']")).sendKeys("dhondiba");  
     Thread .sleep(2000); 
     //Claimant name(marathi)
-    driver().findElement(By.xpath("//input[@placeholder='Claimant Name (Marathi)']")).sendKeys("सौमना�?ज");
+    driver().findElement(By.xpath("//input[@placeholder='Claimant Name (Marathi)']")).sendKeys("सौमना�?ज");
     
     
     //father name

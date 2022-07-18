@@ -40,11 +40,11 @@ public class Register_old_CFR_Apprvd extends Thanedlc
     driver().findElement(By.xpath("//*[@id=\"content\"]/app-create-old-cfr-case/div[1]/div/div/div/div/div/div/form/div/div[1]/div[3]/div/ngx-select/div/ngx-select-choices/ul/li[2]/a/span")).click();
     Thread.sleep(2000);
   //select claim no
-    driver().findElement(By.xpath("//input[@placeholder='Claim No']")).sendKeys("1706/ar4");
+    driver().findElement(By.xpath("//input[@placeholder='Claim No']")).sendKeys("407/Nit");
     Thread.sleep(2000);
     driver().findElement(By.xpath("//*[@id=\"content\"]/app-create-old-cfr-case/div[1]/div/div/div/div/div/div/form/div/div[1]/div[4]/div/div/button")).click();
     Thread.sleep(3000);
-    driver().findElement(By.xpath("//input[@placeholder='Claim Date']")).sendKeys("12/05/2018");  
+    driver().findElement(By.xpath("//input[@placeholder='Claim Date']")).sendKeys("04/07/2010");  
     Thread .sleep(2000); 
     //radio seleaction
     driver().findElement(By.name("roCWH")).click();
@@ -180,7 +180,7 @@ public class Register_old_CFR_Apprvd extends Thanedlc
       //click on claim list
       driver().findElement(By.xpath("//*[@id=\"collapse2\"]/div/ul/li[3]/a")).click();  
       Thread .sleep(2000);
-      driver().findElement(By.xpath("//input[@placeholder='Enter CFR Village Name/Claim No.']")).sendKeys("14/6/21AC");  
+      driver().findElement(By.xpath("//input[@placeholder='Enter CFR Village Name/Claim No.']")).sendKeys("407");  
       Thread .sleep(3000);
       driver().findElement(By.xpath("//*[@id=\"content\"]/app-old-cfr-claim-list/div/div/div/div/div/div[1]/form/div/div[8]/div/button")).click();  
       Thread .sleep(2000);

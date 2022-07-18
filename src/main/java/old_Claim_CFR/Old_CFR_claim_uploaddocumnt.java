@@ -7,7 +7,6 @@ import javax.imageio.ImageIO;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WindowType;
-import org.openqa.selenium.devtools.v100.browser.model.WindowID;
 import org.testng.annotations.Test;
 
 import old_Claim_IFR.Thanedlc;

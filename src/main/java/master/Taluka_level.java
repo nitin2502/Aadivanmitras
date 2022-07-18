@@ -18,8 +18,7 @@ public class Taluka_level {
 	    WebDriver driver= new ChromeDriver();
 	    driver.get("http://trti.mahamining.com/login");
 		driver.manage().window().maximize();
-		driver.findElement(By.xpath("//*[@id=\"home_login\"]")).click();
-		Thread .sleep(1000);	
+	
 		//admin login
 	    driver.findElement(By.xpath("//input[@placeholder='User Name']")).sendKeys("admin");
 	   Thread .sleep(1000);

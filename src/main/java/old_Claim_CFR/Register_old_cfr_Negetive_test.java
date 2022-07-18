@@ -200,7 +200,7 @@ public class Register_old_cfr_Negetive_test extends Thanedlc
 		      driver().navigate().refresh();
 	  
 	  // 8. click on create case button
-		      
+	
 		      driver().findElement(By.xpath("//*[@id=\"content\"]/app-create-old-cfr-case/div[1]/div/div/div/div/div/div/form/div/div[13]/div/button[2]")).click();  
 		      Thread .sleep(2000);
 		      driver().navigate().refresh();

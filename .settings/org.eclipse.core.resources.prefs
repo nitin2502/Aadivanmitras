@@ -1,6 +1,14 @@
 eclipse.preferences.version=1
+encoding//src/main/java/Program_meeting/FlowcompleteIFR.java=UTF-8
+encoding//src/main/java/claimant/Claimant_login.java=UTF-8
+encoding//src/main/java/claimant/VFRC_Committee_Forward.java=UTF-8
+encoding//src/main/java/claimant/VFRC_Committee_login.java=UTF-8
+encoding//src/main/java/claimant/VFRC_Prgrm_Mtng.java=UTF-8
+encoding//src/main/java/claimant/VFRC_updt_atndnc.java=UTF-8
+encoding//src/main/java/old_Claim_CFR/InprogressclaimsCFR.java=UTF-8
 encoding//src/main/java/old_Claim_CFR/Register_old_CFR_Apprvd.java=UTF-8
 encoding//src/main/java/old_Claim_CFR/Register_old_CFR_Rejected.java=UTF-8
+encoding//src/main/java/old_Claim_IFR/Inprogressclaims.java=UTF-8
 encoding//src/main/java/old_Claim_IFR/Register_old_ifr_Apprvd.java=UTF-8
 encoding//src/main/java/old_Claim_IFR/Register_old_ifr_Apprvd_upload_document.java=UTF-8
 encoding//src/main/java/old_Claim_IFR/Register_old_ifr_Rejcted.java=UTF-8

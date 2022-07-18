@@ -16,7 +16,7 @@ public class Crossbrowser
 	 @BeforeMethod
 	 public void setup() throws Exception
 	 { 
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\niting\\Downloads\\chromedriver_win32 (1)\\crom_drvr-2\\chromedriver.exe\\");
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\niting\\eclipse-workspace\\Aadivanmitras\\Driver\\chromedriver.exe");
 	    driver.set(new ChromeDriver());
 		 // System.setProperty("webdriver.gecko.driver","C:\\Users\\niting\\Downloads\\geckodriver-v0.31.0-win64\\Geckodriver1\\geckodriver.exe");
 		  // driver.set(new FirefoxDriver());

@@ -12,33 +12,39 @@ import org.testng.annotations.BeforeMethod;
 
 public class Thanedlc 
 {
-	protected static ThreadLocal<EdgeDriver> driver=new ThreadLocal<>();
+	//protected static ThreadLocal<EdgeDriver> driver=new ThreadLocal<>();
 	//protected static ThreadLocal<FirefoxDriver> driver=new ThreadLocal<>();
-	// protected static ThreadLocal<ChromeDriver> driver=new ThreadLocal<>();
+	 protected static ThreadLocal<ChromeDriver> driver=new ThreadLocal<>();
 	 @BeforeMethod
 	 public void setup() throws Exception
-	 { System.out.println("Browser Name Is:Firefox");
-	 
-		//System.setProperty("webdriver.chrome.driver","C:\\Users\\niting\\eclipse-workspace\\Aadivanmitras\\Driver\\chromedriver.exe");
-	   // driver.set(new ChromeDriver());
+	 { 
+	
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\niting\\eclipse-workspace\\Aadivanmitras\\Driver\\chromedriver.exe");
+	   driver.set(new ChromeDriver());
 	 
 	 
 	 /*System.setProperty("webdriver.gecko.driver","C:\\Users\\niting\\eclipse-workspace\\Aadivanmitras\\Driver\\geckodriver.exe");
 	   driver.set(new FirefoxDriver());
 	   */
 
-		  System.setProperty("webdriver.edge.driver","C:\\Users\\niting\\eclipse-workspace\\Aadivanmitras\\Driver\\msedgedriver.exe");
-		  driver.set(new EdgeDriver());
+		 // System.setProperty("webdriver.edge.driver","C:\\Users\\niting\\eclipse-workspace\\Aadivanmitras\\Driver\\msedgedriver.exe");
+		 // driver.set(new EdgeDriver());
 	   
 	    driver().manage().window().maximize();
 		driver().navigate().to("http://trti.mahamining.com/home");
 		 Thread.sleep(1000);
+		
+		 
 		 driver().findElement(By.xpath("//*[@id=\"home_login\"]")).click();
 		Thread .sleep(1000);
-	//Thane DlC login
-	driver().findElement(By.xpath("//*[@id=\"login\"]/div/div/div[2]/form/div/div[1]/div/input")).sendKeys("ThaneDLC");		  
-	Thread .sleep(1000);
-	 driver().findElement(By.xpath("//*[@id=\"login\"]/div/div/div[2]/form/div/div[2]/div/div/input")).sendKeys("aneDLC@5959");
+	//Thane DLC login
+	
+		
+		driver().findElement(By.xpath("//*[@id=\"login\"]/div/div/div[2]/form/div/div[1]/div/input")).sendKeys("ThaneDLC");		  
+	
+		
+		Thread .sleep(1000);
+	    driver().findElement(By.xpath("//*[@id=\"login\"]/div/div/div[2]/form/div/div[2]/div/div/input")).sendKeys("aneDLC@5959");
 	  Thread .sleep(1000);	
 	  String s=JOptionPane.showInputDialog(" Please Enter Captcha");
 	    
@@ -54,12 +60,13 @@ public class Thanedlc
 		  // driver.set(new EdgeDriver());
 	
 	 }
-	 public WebDriver driver()
+	        public WebDriver driver()
 	 {
 		 return driver.get();
 	 }
 	   //  @AfterMethod
 	     public void teardown() 
+
 	     {  
 	    	 driver().quit();
 	     }

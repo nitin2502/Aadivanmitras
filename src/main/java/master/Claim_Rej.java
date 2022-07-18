@@ -25,7 +25,7 @@ public class Claim_Rej {
     WebDriver driver= new ChromeDriver();
     driver.get("http://trti.mahamining.com/login");
 	driver.manage().window().maximize();
-	driver.findElement(By.xpath("//*[@id=\"home_login\"]")).click();
+	
 	Thread .sleep(1000);
 	//Admin login
 	driver.findElement(By.xpath("//*[@id=\"login\"]/div/div/div[2]/form/div/div[1]/div/input")).sendKeys("admin");
