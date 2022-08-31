@@ -30,37 +30,42 @@ public class User_SLMC
 	    Thread .sleep(1000);	
 	    String s=JOptionPane.showInputDialog("enter your captcha");
 	    
-	  	driver.findElement(By.xpath("//input[@placeholder='Enter Captcha']")).sendKeys(s);
+	  	driver.findElement(By.xpath("//input[@placeholder='कॅप्चा प्रविष्ट करा']")).sendKeys(s);
 	      Thread .sleep(1000);
 	    
 	  	driver.findElement(By.xpath("//*[@id=\"login\"]/div/div/div[2]/form/div/div[5]/button")).click();
 	  	Thread .sleep(1000);
+	    //Selection of master
+  		driver.findElement(By.xpath("//*[@id=\"heading1\"]/button/div/div[2]")).click();
+  		Thread .sleep(1000);
 		//click on user tab
-		driver.findElement(By.xpath("/html/body/app-root/app-layout/div/app-sidebar/nav/app-admin-menu/div/div[2]/h2/button")).click();
-		Thread .sleep(2000);
 		driver.findElement(By.xpath("/html/body/app-root/app-layout/div/app-sidebar/nav/app-admin-menu/div/div[2]/div/div/ul/li[4]/a")).click();
 		Thread .sleep(2000); 
 		//click on user field
 				driver.findElement(By.xpath("//*[@id=\"content\"]/app-user-register/div[1]/div/div/div/div[1]/form/div/div/div[1]/div/div[1]/div/ngx-select/div/div[2]/div/span[1]/span")).click();
 				Thread .sleep(1000); 	
-				driver.findElement(By.xpath("//*[@id=\"content\"]/app-user-register/div[1]/div/div/div/div[1]/form/div/div/div[1]/div/div[1]/div/ngx-select/div/ngx-select-choices/ul/li[3]/a/span")).click();
+				driver.findElement(By.xpath("//*[@id=\"content\"]/app-user-register/div[1]/div/div/div/div[1]/form/div/div/div[1]/div/div[1]/div/ngx-select/div/ngx-select-choices/ul/li[2]/a/span")).click();
 				Thread .sleep(1000); 	
 				driver.findElement(By.xpath("//*[@id=\"content\"]/app-user-register/div[1]/div/div/div/div[1]/form/div/div/div[1]/div/div[3]/div/ngx-select/div/div[2]/div/span[1]/span")).click();
 				Thread .sleep(1000);	
-				driver.findElement(By.xpath("//*[@id=\"content\"]/app-user-register/div[1]/div/div/div/div[1]/form/div/div/div[1]/div/div[3]/div/ngx-select/div/ngx-select-choices/ul/li[3]/a/span")).click();
+				driver.findElement(By.xpath("//*[@id=\"content\"]/app-user-register/div[1]/div/div/div/div[1]/form/div/div/div[1]/div/div[3]/div/ngx-select/div/ngx-select-choices/ul/li[2]/a/span")).click();
 				Thread .sleep(1000);	
 				//fill details
-				driver.findElement(By.xpath("//input[@placeholder='Enter Full Name']")).sendKeys("Enterfullname");
+				driver.findElement(By.xpath("//input[@placeholder='पूर्ण नाव प्रविष्ट करा (इंग्रजी)']")).sendKeys("RAma name");
+				Thread .sleep(1000);
+				driver.findElement(By.xpath("//input[@placeholder='पूर्ण नाव प्रविष्ट करा (मराठी)']")).sendKeys("प्रविष्ट करा");
 				Thread .sleep(1000);	
-				driver.findElement(By.xpath("//input[@placeholder='Enter Mobile No']")).sendKeys("9730020958");
+				driver.findElement(By.xpath("//input[@placeholder='मोबाईल नंबर टाका']")).sendKeys("9730020777");
 				Thread .sleep(1000);	
-				driver.findElement(By.xpath("//input[@placeholder='Enter Email']")).sendKeys("abcd2506@gmail.com");
+				driver.findElement(By.xpath("//input[@placeholder='ईमेल प्रविष्ट करा']")).sendKeys("abcd2506@gmail.com");
 				Thread .sleep(1000);	
-				driver.findElement(By.xpath("//input[@placeholder='Enter User Name']")).sendKeys("Saurbhmasg");
+				driver.findElement(By.xpath("//input[@placeholder='वापरकर्त्याचे नाव प्रविष्ट करा']")).sendKeys("abcdefghh");
 				Thread .sleep(1000);	
-				driver.findElement(By.xpath("//*[@id=\"content\"]/app-user-register/div[1]/div/div/div/div[1]/form/div/div/div[1]/div/div[7]/div/div/button")).click();
+				driver.findElement(By.xpath("//button[@class='btn btn-main'][1]")).click();
 				Thread .sleep(1000);	
-				driver.findElement(By.xpath("//textarea[@placeholder='Enter Address']")).sendKeys("abcdgh ,415,dsp road pune");
+				
+		
+				driver.findElement(By.xpath("//textarea[@placeholder='पत्ता प्रविष्ट करा']")).sendKeys("abcdgh ,415,dsp road pune");
 				Thread .sleep(1000);
 				driver.findElement(By.xpath("//*[@id=\"content\"]/app-user-register/div[1]/div/div/div/div[1]/form/div/div/div[2]/button[2]")).click();
 				Thread .sleep(3000);
@@ -70,25 +75,25 @@ public class User_SLMC
 				driver.findElement(By.xpath("//*[@id=\"content\"]/app-user-register/div[1]/div/div/div/div[2]/div/div[2]/div/table/tbody/tr[1]/td[6]/div/button[1]/i")).click();
 				Thread .sleep(1000);
 			    //clear record
-				driver.findElement(By.xpath("//input[@placeholder='Enter Mobile No']")).clear();
+				driver.findElement(By.xpath("//input[@placeholder='मोबाईल नंबर टाका']")).clear();
 				Thread .sleep(1000);
-				driver.findElement(By.xpath("//input[@placeholder='Enter Mobile No']")).sendKeys("9730020959");
+				driver.findElement(By.xpath("//input[@placeholder='मोबाईल नंबर टाका']")).sendKeys("9730020895");
 				Thread .sleep(1000);
-				driver.findElement(By.xpath("//input[@placeholder='Enter Email']")).clear();
+				driver.findElement(By.xpath("//input[@placeholder='ईमेल प्रविष्ट करा']")).clear();
 				Thread .sleep(1000);
-				driver.findElement(By.xpath("//input[@placeholder='Enter Email']")).sendKeys("xyxzcvv@gmail.com");
+				driver.findElement(By.xpath("//input[@placeholder='ईमेल प्रविष्ट करा']")).sendKeys("rgty@gmail.com");
 				Thread .sleep(1000);
 				driver.findElement(By.xpath("//*[@id=\"content\"]/app-user-register/div[1]/div/div/div/div[1]/form/div/div/div[2]/button[2]")).click();
 				Thread .sleep(1000);
 				//delete record
 				driver.findElement(By.xpath("//button[@title='Remove User']")).click();
-				Thread .sleep(1000);
+				Thread .sleep(2000);
 				driver.switchTo().alert().accept();
 				Thread .sleep(3000);
 				// takes screenshot
 				//only mobNo change user register from can accept all details
 				 File  scr =((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-					Files.copy(scr, new File("C:\\Users\\niting\\eclipse-workspace\\Aadivanmitras\\Screenshot\\SLMC01.png"));
+					Files.copy(scr, new File("C:\\Users\\niting\\eclipse-workspace\\Aadivanmitras\\Screenshot\\SLMC001.png"));
 				// browser close
 					 Thread .sleep(3000);
 				  driver.close();   

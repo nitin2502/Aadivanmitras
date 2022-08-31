@@ -30,7 +30,7 @@ public void Inprogress() throws Exception
 	    driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[1]/div[3]/div/ngx-select/div/ngx-select-choices/ul/li[3]/a/span")).click();
 	    Thread.sleep(2000);
 	  //select claim no
-	    driver().findElement(By.xpath("//input[@placeholder='Claim No']")).sendKeys("4/07IFR");
+	    driver().findElement(By.xpath("//input[@placeholder='Claim No']")).sendKeys("5/07IFR");
 	    Thread.sleep(2000);
 	    driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[1]/div[4]/div/div/button")).click();
 	    Thread.sleep(3000);
@@ -200,7 +200,7 @@ public void Inprogress() throws Exception
 	       Thread .sleep(3000);
 	                          
 	  //compartment no
-	      driver().findElement(By.xpath("//input[@placeholder='Compartment No']")).sendKeys("4/07IFR");  
+	      driver().findElement(By.xpath("//input[@placeholder='Compartment No']")).sendKeys("5/07IFR");  
 	      Thread .sleep(2000);
 	      
 	      //survey no / gat no 

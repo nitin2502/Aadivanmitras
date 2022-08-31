@@ -19,9 +19,9 @@ public class VFRC_CFR_register
     d.get("http://trti.mahamining.com/login");
 	Thread .sleep(1000);
     // VFRC Login
-	d.findElement(By.xpath("//input[@placeholder='User Name']")).sendKeys("Nitin555");		  
+	d.findElement(By.xpath("//input[@placeholder='User Name']")).sendKeys("NitinG333");		  
 	Thread .sleep(1000);
-	d.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("tin555@0209");		  
+	d.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("tinG333@0209");		  
 	Thread .sleep(1000);
     String s=JOptionPane.showInputDialog(" Please Enter Captcha");
     d.findElement(By.xpath("//input[@placeholder='Enter Captcha']")).sendKeys(s);
@@ -36,7 +36,7 @@ public class VFRC_CFR_register
   	Thread .sleep(1000);
 	
   	// claim Details 
-  //radio seleaction
+  //radio selection
     d.findElement(By.name("roCWH")).click();
     Thread.sleep(1000);
     d.findElement(By.name("roPVTG")).click();
@@ -67,7 +67,7 @@ public class VFRC_CFR_register
     d.findElement(By.xpath("//input[@placeholder='Enter Pada']")).sendKeys("ketur,vangi");  
     Thread .sleep(2000); 
     // Enter aDDRESS
-    d.findElement(By.xpath("//textarea[@placeholder='Enter Address']")).sendKeys("    Swarget , pune. pin-413209   rejected due to Document 75(a), 75(B ) not updated ");  
+    d.findElement(By.xpath("//textarea[@placeholder='Enter Address']")).sendKeys("   Swarget , pune. pin-413209   rejected due to Document 75(a), 75(B ) not updated ");  
     Thread .sleep(2000); 
   	
   	// basic details
@@ -83,8 +83,7 @@ public class VFRC_CFR_register
 	
     d.findElement(By.xpath("//*[@id=\"content\"]/app-cfr-register/div[1]/div/div/div/div/div/div/form/div/div[5]/div/div/div[2]/div/div/input")).sendKeys("1.5");  
     Thread .sleep(1000);
-    d.findElement(By.xpath("//*[@id=\"content\"]/app-cfr-register/div[1]/div/div/div/div/div/div/form/div/div[6]/div/div/div[2]/div/div/input")).sendKeys("4.00");  
-    Thread .sleep(1000);
+  
   
     //Boundary of Claimed Space
     d.findElement(By.xpath("//input[@placeholder='To The East']")).sendKeys("Mandir");  

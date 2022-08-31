@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Program_meeting.Create_Program_meetings">
+      <class name="NewClaimant.IFRClaimApply">
         <methods>
-          <include name="setup"/>
-          <include name="Program_meeting"/>
+          <include name="ApplyNewClaim"/>
+          <include name="Managedriver"/>
         </methods>
-      </class> <!-- Program_meeting.Create_Program_meetings -->
+      </class> <!-- NewClaimant.IFRClaimApply -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

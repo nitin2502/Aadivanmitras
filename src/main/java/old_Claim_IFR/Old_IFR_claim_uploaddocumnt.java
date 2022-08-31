@@ -20,10 +20,10 @@ public class Old_IFR_claim_uploaddocumnt extends Thanedlc
   {  
 	
 	  Thread.sleep(3000);
-	  driver().get("http://trti.mahamining.com/oldIfrClaimUploadDocument/71");
+	  driver().get("http://trti.mahamining.com/oldIfrClaimUploadDocument/33");
 	  Thread .sleep(3000);
 	  
-	  /*
+	 
 	  driver().findElement(By.xpath("//*[@id=\"content\"]/app-old-ifr-claim-upload-document/div[1]/div/div/div/div/div[3]/div/div[1]/label")).click();
 	  Thread .sleep(10000);
 	  driver().findElement(By.name("30-test")).click();
@@ -31,7 +31,7 @@ public class Old_IFR_claim_uploaddocumnt extends Thanedlc
 	  driver().findElement(By.xpath("//input[@placeholder='dd-mm-yyyy']")).sendKeys("02-10-1990");
 	  Thread .sleep(2000);
 	
-	  driver().findElement(By.xpath("//*[@id=\"content\"]/app-old-ifr-claim-upload-document/div[1]/div/div/div/div/div[5]/table/tbody/tr[1]/td[5]/div/label")).click();
+	  driver().findElement(By.xpath("//*[@id=\"content\"]/app-old-ifr-claim-upload-document/div[1]/div/div/div/div/div[5]/table/tbody/tr[3]/td[5]/div/label")).click();
 	  Thread .sleep(10000);
 	  driver().findElement(By.xpath("//*[@id=\"content\"]/app-old-ifr-claim-upload-document/div[1]/div/div/div/div/div[6]/button")).click();
 	  Thread .sleep(2000);
@@ -43,8 +43,8 @@ public class Old_IFR_claim_uploaddocumnt extends Thanedlc
       Thread .sleep(2000);
       driver().findElement(By.xpath("//a[@class='btn btn-light rounded ng-star-inserted']")).click();  
       Thread .sleep(10000);
-	  */
 	  
+	  driver().navigate().refresh();
 	  
 	  // without uploading mandatory document
 	  
@@ -87,9 +87,6 @@ public class Old_IFR_claim_uploaddocumnt extends Thanedlc
 	       
 			 driver().findElement(By.xpath("//*[@id=\"content\"]/app-old-ifr-claim-upload-document/div[1]/div/div/div/div/div[6]/button")).click();
 			  Thread .sleep(2000);
-		  
-		  
-		  
 		  
 		  driver().quit();
   

@@ -22,9 +22,9 @@ public class Claimant_login {
 	d.manage().window().maximize();
     d.get("http://trti.mahamining.com/home");
 	Thread .sleep(1000);
-	d.findElement(By.xpath("//input[@placeholder='User Name']")).sendKeys("NITI1591");
+	d.findElement(By.xpath("//input[@placeholder='User Name']")).sendKeys("NITI87471");
 	Thread .sleep(1000);
-	d.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("627FAC4");
+	d.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("DF11F3F3");
 	Thread .sleep(1000);	
 	d.findElement(By.id("home_claimant_login")).click();
 	Thread .sleep(1000);	
@@ -56,12 +56,12 @@ public class Claimant_login {
     d.findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[2]/div[5]/div/ngx-select/div/ngx-select-choices/ul/li[3]/a/span")).click();
     Thread.sleep(2000);
    //select town /village
-    d.findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[2]/div[6]/ngx-select/div/div[2]/div/span[1]/span")).click();
+    d.findElement(By.xpath("//ngx-select[@placeholder='Select Village']")).click();
     Thread.sleep(2000);
-    d.findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[2]/div[6]/ngx-select/div/ngx-select-choices/ul/li[117]/a/span")).click();
+    d.findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[2]/div[6]/div/ngx-select/div/ngx-select-choices/ul/li[117]/a/span")).click();
     Thread.sleep(2000);
    //select panchayat
-    d.findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[2]/div[7]/ngx-select/div/div[2]/div/span[1]/span")).click();
+    d.findElement(By.xpath("//ngx-select[@placeholder='Select Grampanchayat']")).click();
     Thread.sleep(2000); 
     d.findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[2]/div[7]/ngx-select/div/ngx-select-choices/ul/li[106]/a/span")).click();
     Thread.sleep(2000);
@@ -173,7 +173,7 @@ public class Claimant_login {
     Thread .sleep(2000);   
     
     // Click on create case button
-    d.findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[9]/div/button")).click();  
+    d.findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[9]/div/button[2]")).click();  
     Thread .sleep(1000); 
   
   

@@ -22,10 +22,10 @@ public class Old_CFR_claim_uploaddocumnt extends Thanedlc
   {  
 	
 	  Thread.sleep(3000);
-	  driver().get("http://trti.mahamining.com/oldCfrClaimUploadDocument/38");
+	  driver().get("http://trti.mahamining.com/oldCfrClaimUploadDocument/19");
 	  Thread .sleep(3000);
 	 
-	  /*
+	  
 	  
 	  driver().findElement(By.xpath("//*[@id=\"content\"]/app-old-cfr-claim-upload-document/div[1]/div/div/div/div/div[3]/div/div[1]/label")).click();
 	  Thread .sleep(10000);
@@ -46,9 +46,9 @@ public class Old_CFR_claim_uploaddocumnt extends Thanedlc
       Thread .sleep(2000);
       driver().findElement(By.xpath("//*[@id=\"content\"]/app-old-cfr-claim-list/div/div/div/div/div/div[2]/table/tbody/tr/td[10]/a/i")).click();  
     
-      Thread .sleep(30000);
+      Thread .sleep(10000);
 	 
-	  */
+	  driver().navigate().refresh();
 	  
 	  
 	  // without uploading mandatory document

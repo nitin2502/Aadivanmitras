@@ -23,9 +23,8 @@ public class Claim_Rej {
 	public static void main(String[] args) throws InterruptedException, IOException
 	{System.setProperty("webdriver.chrome.driver","C:\\Users\\niting\\eclipse-workspace\\Aadivanmitras\\Driver\\chromedriver.exe");
     WebDriver driver= new ChromeDriver();
+    driver.manage().window().maximize();
     driver.get("http://trti.mahamining.com/login");
-	driver.manage().window().maximize();
-	
 	Thread .sleep(1000);
 	//Admin login
 	driver.findElement(By.xpath("//*[@id=\"login\"]/div/div/div[2]/form/div/div[1]/div/input")).sendKeys("admin");
@@ -34,7 +33,7 @@ public class Claim_Rej {
     Thread .sleep(1000);	
     String s=JOptionPane.showInputDialog("enter your captcha");
     
-  	driver.findElement(By.xpath("//input[@placeholder='Enter Captcha']")).sendKeys(s);
+  	driver.findElement(By.xpath("//input[@placeholder='कॅप्चा प्रविष्ट करा']")).sendKeys(s);
       Thread .sleep(1000);
     
   	driver.findElement(By.xpath("//*[@id=\"login\"]/div/div/div[2]/form/div/div[5]/button")).click();
@@ -42,7 +41,7 @@ public class Claim_Rej {
 	// master selection
 	driver.findElement(By.xpath("//*[@id=\"heading1\"]/button/div/div[2]")).click();
 	Thread .sleep(1000);
-	// claim rej   sel
+	// claim rej sel
 	driver.findElement(By.xpath("//*[@id=\"collapse1\"]/div/ul/li[7]/a")).click();
 	Thread .sleep(1000);   
 	//click on select commit
@@ -58,12 +57,16 @@ public class Claim_Rej {
 	Thread .sleep(1000);  
 	//click on submit butt
 	driver.findElement(By.xpath("//*[@id=\"content\"]/app-claim-rejection-remark/div/div/div/div/div[1]/form/div/div/div[2]/button[2]")).click();
-	Thread .sleep(1000); 
-	driver.findElement(By.xpath("//*[@id=\"content\"]/app-claim-rejection-remark/div/div/div/div/div[2]/div/div[2]/div/table/tbody/tr[1]/td[5]/div/button[1]")).click();
+	Thread .sleep(3000);
+	
+	
+	driver.navigate().refresh();
+	//click on edit button
+	driver.findElement(By.xpath("//*[@id=\"content\"]/app-claim-rejection-remark/div/div/div/div/div[2]/div/div[2]/div/table/tbody/tr[1]/td[5]/div/button[1]/i")).click();
 	Thread .sleep(1000);
-	driver.findElement(By.xpath("// input[@ placeholder='Enter Rejection Title']")).clear();
+	driver.findElement(By.xpath("// input[@ placeholder='नकार शीर्षक प्रविष्ट करा']")).clear();
 	Thread .sleep(1000);
-	driver.findElement(By.xpath("// input[@ placeholder='Enter Rejection Title']")).sendKeys("DLC Edited");
+	driver.findElement(By.xpath("// input[@ placeholder='नकार शीर्षक प्रविष्ट करा']")).sendKeys("DLC Edited");
 	Thread .sleep(1000);
 	//update record
 	driver.findElement(By.xpath("//*[@id=\"content\"]/app-claim-rejection-remark/div/div/div/div/div[1]/form/div/div/div[2]/button[2]")).click();
@@ -76,7 +79,7 @@ public class Claim_Rej {
 	//takes screenshot
 	Screenshot k= new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver);
 
-	ImageIO.write(k.getImage(), "png", new File("C:\\Users\\niting\\eclipse-workspace\\Aadivanmitras\\Screenshot\\Claim_rej_01.png"));
+	ImageIO.write(k.getImage(), "png", new File("C:\\Users\\niting\\eclipse-workspace\\Aadivanmitras\\Screenshot\\Claim_rej_001.png"));
 // close browser
 	Thread .sleep(4000);
 	  driver.close();	

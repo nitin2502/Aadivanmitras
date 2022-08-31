@@ -3,12 +3,11 @@
 <suite name="Failed suite [Failed suite [Default suite]]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)(failed)">
     <classes>
-      <class name="old_Claim.Register_old_ifr_Apprvd">
+      <class name="NewClaimant.ClaimantRegis">
         <methods>
-          <include name="Registerold"/>
-          <include name="setup"/>
+          <include name="Managedriver"/>
         </methods>
-      </class> <!-- old_Claim.Register_old_ifr_Apprvd -->
+      </class> <!-- NewClaimant.ClaimantRegis -->
     </classes>
   </test> <!-- Default test(failed)(failed) -->
 </suite> <!-- Failed suite [Failed suite [Default suite]] -->
