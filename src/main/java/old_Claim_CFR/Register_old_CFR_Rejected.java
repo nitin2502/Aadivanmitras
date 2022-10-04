@@ -26,11 +26,11 @@ public class Register_old_CFR_Rejected extends Thanedlc
 		  driver().findElement(By.xpath("//*[@id=\"languagebox\"]/div/label[2]")).click();
 		    Thread.sleep(1000); 
 		    
-	  // click on old cfr regi
-    driver().findElement(By.xpath("//*[@id=\"heading2\"]/button/div/div[2]")).click();
-    Thread.sleep(1000);
-    driver().findElement(By.xpath("//*[@id=\"collapse2\"]/div/ul/li[1]/a")).click();
-    Thread.sleep(1000);  
+		   // click on old cfr regi
+		    driver().findElement(By.xpath("//*[@id=\"heading3\"]/button/div/div[2]")).click();
+		    Thread.sleep(1000);
+		    driver().findElement(By.xpath("//*[@id=\"collapse3\"]/div/ul/li[1]/a")).click();
+		    Thread.sleep(1000);  
     
     
     driver().findElement(By.xpath("//*[@id=\"content\"]/app-create-old-cfr-case/div[1]/div/div/div/div/div/div/form/div/div[1]/div[2]/div/ngx-select/div/div[2]/div/span[1]/span")).click();
@@ -43,10 +43,10 @@ public class Register_old_CFR_Rejected extends Thanedlc
     driver().findElement(By.xpath("//*[@id=\"content\"]/app-create-old-cfr-case/div[1]/div/div/div/div/div/div/form/div/div[1]/div[3]/div/ngx-select/div/ngx-select-choices/ul/li[2]/a/span")).click();
     Thread.sleep(1000);
   //select claim no
-    driver().findElement(By.xpath("//input[@placeholder='Claim No']")).sendKeys("17000/R");
+    driver().findElement(By.xpath("//input[@placeholder='Claim No']")).sendKeys("299thr");
     Thread.sleep(1000);
     driver().findElement(By.xpath("//*[@id=\"content\"]/app-create-old-cfr-case/div[1]/div/div/div/div/div/div/form/div/div[1]/div[4]/div/div/button")).click();
-    Thread.sleep(3000);
+    Thread.sleep(5000);
     
     //claim date
     driver().findElement(By.xpath("//input[@placeholder='Claim Date']")).sendKeys("12/05/2017");  

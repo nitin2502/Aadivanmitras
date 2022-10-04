@@ -87,7 +87,7 @@ public class User_SDLC {
 	
 		driver.findElement(By.xpath("//input[@placeholder='वापरकर्त्याचे नाव प्रविष्ट करा']")).sendKeys("abcdefghh");
 		Thread .sleep(1000);	
-		driver.findElement(By.xpath("//button[@class='btn btn-main'][1]")).click();
+		driver.findElement(By.xpath("//*[@id=\"content\"]/app-user-register/div[1]/div/div/div/div[1]/form/div/div/div[1]/div/div[11]/div/div/button")).click();
 		Thread .sleep(1000);	
 		driver.findElement(By.xpath("//textarea[@placeholder='पत्ता प्रविष्ट करा']")).sendKeys("abcdgh ,415,dsp road pune");
 		Thread .sleep(1000);
@@ -129,9 +129,7 @@ public class User_SDLC {
 		
 	}
 
-	private static WebElement drivr() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
+	
 
 }

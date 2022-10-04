@@ -15,8 +15,7 @@ import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
 public class Register_old_CFR_Apprvd extends Thanedlc 
 
-{    
-  @Test()
+{      @Test()
   public void Registerold() throws Exception
   
      
@@ -27,9 +26,9 @@ public class Register_old_CFR_Apprvd extends Thanedlc
 	  
 	
 	  // click on old cfr regi
-    driver().findElement(By.xpath("//*[@id=\"heading2\"]/button/div/div[2]")).click();
+    driver().findElement(By.xpath("//*[@id=\"heading3\"]/button/div/div[2]")).click();
     Thread.sleep(1000);
-    driver().findElement(By.xpath("//*[@id=\"collapse2\"]/div/ul/li[1]/a")).click();
+    driver().findElement(By.xpath("//*[@id=\"collapse3\"]/div/ul/li[1]/a")).click();
     Thread.sleep(1000);  
     
     

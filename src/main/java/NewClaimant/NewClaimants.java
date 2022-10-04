@@ -1,11 +1,15 @@
 package NewClaimant;
 
+import java.util.List;
+
 import javax.swing.JOptionPane;
+
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -14,11 +18,12 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class NewClaimants
+public  class NewClaimants  
 {
 	
 	WebDriver d;
-	 @BeforeTest
+	
+	 @Test
 	  public void Managedriver()
 	  
 	 {   
@@ -30,39 +35,52 @@ public class NewClaimants
 		  
 		 d= new ChromeDriver();
 		 String url="https://aadivanmitra.org/c-registration";
+		// String url ="http://trti.mahamining.com/c-registration";
 		 d.get(url);
+	     List<WebElement> elements = d.findElements(By.xpath("//*[@id=\"conditionsMdoalId\"]/div/div/form/div[1]/div[2]/div[2]/div/ngx-select/div/input"));
+	        System.out.println("Number of elements:" +elements);
 		 d.manage().window().maximize();
+		
 		 // Examine Actual v/s Expected title
 		 String ExpectedTitle ="AadiVanMitra"; 
 		 String actualtitle   = d.getTitle();
+		 Assert.assertEquals(actualtitle, ExpectedTitle);
 		 System.out.println(actualtitle);
+		 if (actualtitle.contentEquals(ExpectedTitle)){
+	            System.out.println("Test Passed!");
+	        } else {
+	            System.out.println("Test Failed");
+	        }
+	
 		String n=d.getCurrentUrl();
 		System.out.println(n);
 		String k =d.toString();
 		System.out.println(k); 
-		   int numberOfLinks = d.findElements(By.tagName("a")).size();
-	        System.out.println("Number of links on Web Page :" + numberOfLinks);
-	
-		 Assert.assertEquals(actualtitle, ExpectedTitle);
+	 int noofurl = d.findElements(By.tagName("a")).size();
+	 System.out.println("Number of links on Web Page :" + noofurl);
 		  
 	 }
 	    @Test(priority=1)
-	    public void registration () throws Exception
+	    public void Castselect() throws Exception
 	    
 	    {  //select Tribe
 	    	d.findElement(By.xpath("//ngx-select[@formcontrolname='AreYouFromScheduledTribe']")).click();
 	        Thread.sleep(1000);
+	   
 	        d.findElement(By.xpath("//*[@id=\"conditionsMdoalId\"]/div/div/form/div[1]/div[2]/div[2]/div/ngx-select/div/ngx-select-choices/ul/li[4]/a/span")).click();
 	        Thread.sleep(1000);
+	   
 	        d.findElement(By.xpath("//*[@id=\"conditionsMdoalId\"]/div/div/form/div[2]/div/div/button")).click();
 	        Thread.sleep(1000);
+	    
+	        
 	       
 	   		
 	    }@Test(priority=2)
 	      public void claimantregistraton() throws Exception
 	      {  //Enter Claimant details
 	    	
-	    	d.findElement(By.xpath("//input[@formcontrolname='name']")).sendKeys("sachin ghorpade");
+	    	d.findElement(By.xpath("//input[@formcontrolname='name']")).sendKeys("ramesh jka");
 	        Thread.sleep(1000);
 	        d.findElement(By.xpath("//input[@value='Male']")).click();
 	        Thread.sleep(1000);
@@ -72,7 +90,7 @@ public class NewClaimants
 	        Thread.sleep(1000);
 	      
 	      }@Test(priority=3)
-	      public void EnterOtp() throws Exception
+	      public  void EnterOtp() throws Exception
 	      {
 	    	  String s=JOptionPane.showInputDialog("Enter OTP"); 
 	    	 	d.findElement(By.xpath("//input[@formcontrolname='otp']")).sendKeys(s);

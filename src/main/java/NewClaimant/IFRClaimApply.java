@@ -5,6 +5,7 @@ import javax.swing.JOptionPane;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -16,24 +17,25 @@ public class IFRClaimApply
 {
 	
 	WebDriver d;
-	 @BeforeTest
+	   @BeforeTest
 	  public void Managedriver()
 	  
+	  
+	   
 	 {   
 		 System.out.println("starting Sucessfully");
 		 
-		 // setting the chromedriver 
+	 // setting the chromedriver 
 		
 		WebDriverManager.chromedriver().setup();
-		  
 		 d= new ChromeDriver();
 		 String url="https://aadivanmitra.org/home";
+		// String url="http://trti.mahamining.com/home";
 		 d.get(url);
 		 d.manage().window().maximize();
 		 // Examine Actual v/s Expected title
 		 String ExpectedTitle ="AadiVanMitra";
 		 String actualtitle   = d.getTitle();
-		 
 		 Assert.assertEquals(actualtitle, ExpectedTitle);
 		  
 	 }
@@ -42,75 +44,75 @@ public class IFRClaimApply
 	    
 	    {  //Login details
 	    	d.findElement(By.xpath("/html/body/app-root/app-web-layout/div/app-web-header/div[1]/div[2]/div/div/nav/div/div/ul/li[8]/a")).click();
-	        Thread.sleep(1000);
-	        d.findElement(By.xpath("//*[@id=\"main\"]/app-root/app-web-layout/div/app-web-header/div[1]/div[2]/div/div/nav/div/div/ul/li[8]/ul/li[1]/a")).click();
-	        Thread.sleep(1000);
-	        d.findElement(By.xpath("//input[@formcontrolname='username'][1]")).sendKeys("SACH46140");
-	        Thread.sleep(1000);
-	        d.findElement(By.xpath("//input[@formcontrolname='password'][1]")).sendKeys("8D501D4A");
-	        Thread.sleep(1000);
-	        String s=JOptionPane.showInputDialog("Enter Captcha"); 
-    	 	d.findElement(By.xpath("//input[@formcontrolname='recaptchaReactive'][1]")).sendKeys(s);
-    	     Thread .sleep(1000);
-    	     d.findElement(By.xpath("//*[@id=\"ClaimantLogin\"]/div/div/div[2]/form/div/div[5]/button")).click();
- 	        Thread.sleep(3000);
+	    	Thread.sleep(1000);
+	    	d.findElement(By.xpath("//*[@id=\"main\"]/app-root/app-web-layout/div/app-web-header/div[1]/div[2]/div/div/nav/div/div/ul/li[8]/ul/li[1]/a")).click();
+	    	Thread.sleep(1000);
+	    	d.findElement(By.xpath("//input[@formcontrolname='username'][1]")).sendKeys("RAME81724");
+	    	Thread.sleep(1000);
+	    	d.findElement(By.xpath("//input[@formcontrolname='password'][1]")).sendKeys("FD1BE13F");
+	    	Thread.sleep(1000);
+	    	String s=JOptionPane.showInputDialog("Enter Captcha"); 
+	    	d.findElement(By.xpath("//input[@formcontrolname='recaptchaReactive'][1]")).sendKeys(s);
+	    	Thread .sleep(1000);
+	    	d.findElement(By.xpath("//*[@id=\"ClaimantLogin\"]/div/div/div[2]/form/div/div[5]/button")).click();
+	    	Thread.sleep(3000);
     	     
 	    }@Test(priority=2)
-	      public void ApplyNewClaim() throws Exception
+	    public void ApplyNewClaim() throws Exception
 	      {  //Enter Claimant details
-	    
-	    	d.findElement(By.xpath("//*[@id=\"content\"]/app-claimant-dashboard/div[1]/div/div/div[2]/div/a")).click();
+
+	    	d.findElement(By.xpath("//a[@routerlink='../ifrRegister'][1]")).click();
 	    	Thread .sleep(1000);	
-	    	
+
 	    	//claim details
 	    	d.findElement(By.xpath("//input[@formcontrolname='aadharNo']")).sendKeys("596271010532");
 	    	Thread .sleep(1000);	
 	    	d.findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[1]/div[1]/div/div/button")).click();
 	    	Thread .sleep(1000);	
-	    
-	        //Basic details
-	        //Claimant name(English)
-	        d.findElement(By.xpath("//input[@formcontrolname='claimantName']")).sendKeys("Somnath");
-	        Thread .sleep(1000); 
-	      //Claimant name(English)
-	        d.findElement(By.xpath("//input[@formcontrolname='claimantNameMarathi']")).sendKeys("दावेदा");
-	        Thread .sleep(1000); 
-	        //father name
-	        d.findElement(By.xpath("//input[@formcontrolname='fatherName']")).sendKeys("Rrrr");
-	        Thread .sleep(1000);
-	        //Enter Mob no
-	        d.findElement(By.xpath("//input[@formcontrolname='mobileNo']")).sendKeys("9730020955");  
-	        Thread .sleep(1000); 
-	        
-	        //email
-	        d.findElement(By.xpath("//input[@formcontrolname='email'][1]")).sendKeys("xyzd123@gmail.com");  
-	        Thread .sleep(1000); 
-	        
-	        //claimant category
-	       d.findElement(By.xpath("//ngx-select[@formcontrolname='claimantCategory']")).click();  
-	        Thread .sleep(1000);
-	       d.findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[1]/div[2]/div[8]/div/ngx-select/div/ngx-select-choices/ul/li[3]/a/span")).click();  
-	        Thread .sleep(1000);
-	      //claimant caste
-	       d.findElement(By.xpath("//ngx-select[@formcontrolname='claimantCaste']")).click();  
-	        Thread .sleep(1000);
-	       d.findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[1]/div[2]/div[9]/div/ngx-select/div/ngx-select-choices/ul/li[4]/a/span")).click();  
-	        Thread .sleep(1000);
-	        
-	     //martial status
-	        //unmarried
-	       d.findElement(By.id("maritalstatus2")).click();  
-	        Thread .sleep(1000);
-	        //click on married
-	       d.findElement(By.id("maritalstatus1")).click();  
-	        Thread .sleep(1000);
-	       //spouse name 
-	       d.findElement(By.xpath("//input[@formcontrolname='spouseName']")).sendKeys("Zansi");  
-	        Thread .sleep(2000);
-	       
-	        //spousecategory
-	       d.findElement(By.xpath("//ngx-select[@formcontrolname='spouseCategory']")).click();  
-	        Thread .sleep(1000);
+
+	    	//Basic details
+	    	//Claimant name(English)
+	    	d.findElement(By.xpath("//input[@formcontrolname='claimantName']")).sendKeys("Somnath");
+	    	Thread .sleep(1000); 
+	    	//Claimant name(English)
+	    	d.findElement(By.xpath("//input[@formcontrolname='claimantNameMarathi']")).sendKeys("दावेदा");
+	    	Thread .sleep(1000); 
+	    	//father name
+	    	d.findElement(By.xpath("//input[@formcontrolname='fatherName']")).sendKeys("Rrrr");
+	    	Thread .sleep(1000);
+	    	//Enter Mob no
+	    	d.findElement(By.xpath("//input[@formcontrolname='mobileNo']")).sendKeys("9730020955");  
+	    	Thread .sleep(1000); 
+
+	    	//email
+	    	d.findElement(By.xpath("//input[@formcontrolname='email'][1]")).sendKeys("xyzd123@gmail.com");  
+	    	Thread .sleep(1000); 
+
+	    	//claimant category
+	    	d.findElement(By.xpath("//ngx-select[@formcontrolname='claimantCategory']")).click();  
+	    	Thread .sleep(1000);
+	    	d.findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[1]/div[2]/div[8]/div/ngx-select/div/ngx-select-choices/ul/li[3]/a/span")).click();  
+	    	Thread .sleep(1000);
+	    	//claimant caste
+	    	d.findElement(By.xpath("//ngx-select[@formcontrolname='claimantCaste']")).click();  
+	    	Thread .sleep(1000);
+	    	d.findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[1]/div[2]/div[9]/div/ngx-select/div/ngx-select-choices/ul/li[4]/a/span")).click();  
+	    	Thread .sleep(1000);
+
+	    	//martial status
+	    	//unmarried
+	    	d.findElement(By.id("maritalstatus2")).click();  
+	    	Thread .sleep(1000);
+	    	//click on married
+	    	d.findElement(By.id("maritalstatus1")).click();  
+	    	Thread .sleep(1000);
+	    	//spouse name 
+	    	d.findElement(By.xpath("//input[@formcontrolname='spouseName']")).sendKeys("Zansi");  
+	    	Thread .sleep(2000);
+
+	    	//spousecategory
+	    	d.findElement(By.xpath("//ngx-select[@formcontrolname='spouseCategory']")).click();  
+	    	Thread .sleep(1000);
 	       d.findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[1]/div[2]/div[12]/div/ngx-select/div/ngx-select-choices/ul/li[3]/a/span")).click();  
 	        Thread .sleep(1000);
 	      //spouse  caste
@@ -185,36 +187,36 @@ public class IFRClaimApply
 	                            
 	    //compartment no
 	        d.findElement(By.xpath("//input[@formcontrolname='compartmentNo']")).sendKeys("123/abd");  
-	        Thread .sleep(2000);
+	        Thread .sleep(1000);
 	        
 	        //survey no 
 	        d.findElement(By.xpath("//input[@formcontrolname='surveyNo']")).sendKeys("123/A,125/b");  
-	        Thread .sleep(2000);      
+	        Thread .sleep(1000);      
 	         
 	        //ToTAL AREA
 	        d.findElement(By.xpath("//input[@formcontrolname='surveyArea']")).sendKeys("1.5");  
-	        Thread .sleep(2000); 
+	        Thread .sleep(1000); 
 	       
 	        //CLAIMED AREA 
 	        d.findElement(By.xpath("//input[@formcontrolname='claimantsArea']")).sendKeys("33");  
-	        Thread .sleep(2000); 
+	        Thread .sleep(1000); 
 	          
 	        //Boundary of Claimed Space
 	        d.findElement(By.xpath("//input[@formcontrolname='to_the_East']")).sendKeys("Mandir");  
-	        Thread .sleep(2000); 
+	        Thread .sleep(1000); 
 	        d.findElement(By.xpath("//input[@formcontrolname='to_the_West']")).sendKeys("school");  
-	        Thread .sleep(2000); 
+	        Thread .sleep(1000); 
 	        d.findElement(By.xpath("//input[@formcontrolname='to_the_North']")).sendKeys("playground");  
-	        Thread .sleep(2000); 
+	        Thread .sleep(1000); 
 	        d.findElement(By.xpath("//input[@formcontrolname='to_the_South']")).sendKeys("River");  
-	        Thread .sleep(2000);   
+	        Thread .sleep(1000);   
 	        
 	        // Click on create case button
 	        d.findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[9]/div/button[2]")).click();  
 	        Thread .sleep(1000); 
 	    
 	        d.findElement(By.xpath("//*[@id=\"ConfirmModal\"]/div/div/div[2]/button[2]")).click();  
-	        Thread .sleep(2000);
+	        Thread .sleep(1000);
 	        d.findElement(By.xpath(" //*[@id=\"ConfirmDocumentModal\"]/div/div/div[2]/button[1]")).click();  
 	        Thread .sleep(5000);
 	    	

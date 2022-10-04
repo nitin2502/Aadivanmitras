@@ -18,9 +18,10 @@ public class Register_old_ifr_Rejcted extends Thanedlc
   public void Registerold() throws Exception
   {  // click on old ifr regi
 	  Thread.sleep(3000);
-    driver().findElement(By.xpath("//*[@id=\"heading1\"]/button/div/div[2]")).click();
+	  // click on old ifr regi
+    driver().findElement(By.xpath("//*[@id=\"heading2\"]/button/div/div[2]")).click();
     Thread.sleep(1000);
-    driver().findElement(By.xpath("//*[@id=\"collapse1\"]/div/ul/li[1]/a")).click();
+    driver().findElement(By.xpath("//*[@id=\"collapse2\"]/div/ul/li[1]/a")).click();
     Thread.sleep(1000);  
    // claim details
     driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[1]/div[2]/div/ngx-select/div/div[2]/div/span[1]/span")).click();
@@ -33,7 +34,7 @@ public class Register_old_ifr_Rejcted extends Thanedlc
     driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[1]/div[3]/div/ngx-select/div/ngx-select-choices/ul/li[1]/a/span")).click();
     Thread.sleep(1000);
   //select claim no
-    driver().findElement(By.xpath("//input[@placeholder='दावा क्रमांक']")).sendKeys("245/455");
+    driver().findElement(By.xpath("//input[@placeholder='दावा क्रमांक']")).sendKeys("229/455");
     Thread.sleep(1000);
     driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[1]/div[4]/div/div/button")).click();
     Thread.sleep(3000);

@@ -10,11 +10,15 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import com.google.common.io.Files;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 public class Committe_noticetemplt {
 
 	public static void main(String[] args) throws InterruptedException, IOException 
-	{System.setProperty("webdriver.chrome.driver","C:\\Users\\niting\\eclipse-workspace\\Aadivanmitras\\Driver\\chromedriver.exe");
+	{
+		WebDriverManager.chromedriver().setup();
     WebDriver driver= new ChromeDriver();
+  
     driver.get("http://trti.mahamining.com/login");
 	driver.manage().window().maximize();
 	// Admin login
@@ -78,7 +82,9 @@ public class Committe_noticetemplt {
 	driver.findElement(By.xpath("//*[@id=\"content\"]/app-create-committee-notice-template/div[1]/div/div/div/div[1]/form/div/div/div[2]/div/div[2]/button")).click();
 	//click on delete button
 	driver.findElement(By.xpath("//*[@id=\"content\"]/app-create-committee-notice-template/div[1]/div/div/div/div[2]/div/div[2]/div/table/tbody/tr[1]/td[6]/button[2]/i")).click();
+	String alertMessage = driver.switchTo().alert().getText();
 	driver.switchTo().alert().accept();
+	System.out.println(alertMessage);;
 	Thread .sleep(3000);
 	
 	

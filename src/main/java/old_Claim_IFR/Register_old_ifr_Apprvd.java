@@ -22,9 +22,9 @@ public class Register_old_ifr_Apprvd extends Thanedlc
   { 
 	  Thread.sleep(3000);
 	  // click on old ifr regi
-    driver().findElement(By.xpath("//*[@id=\"heading1\"]/button/div/div[2]")).click();
+    driver().findElement(By.xpath("//*[@id=\"heading2\"]/button/div/div[2]")).click();
     Thread.sleep(1000);
-    driver().findElement(By.xpath("//*[@id=\"collapse1\"]/div/ul/li[1]/a")).click();
+    driver().findElement(By.xpath("//*[@id=\"collapse2\"]/div/ul/li[1]/a")).click();
     Thread.sleep(1000);  
     
     
@@ -42,7 +42,7 @@ public class Register_old_ifr_Apprvd extends Thanedlc
     
     
   //select claim no
-    driver().findElement(By.xpath("//input[@placeholder='दावा क्रमांक']")).sendKeys("16/8TUE");
+    driver().findElement(By.xpath("//input[@placeholder='दावा क्रमांक']")).sendKeys("299/the");
     Thread.sleep(1000);
     driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[1]/div[4]/div/div/button")).click();
     Thread.sleep(3000);

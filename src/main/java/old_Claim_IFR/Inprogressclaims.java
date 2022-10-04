@@ -11,14 +11,14 @@ public class Inprogressclaims extends Thanedlc
 	  public void Inprogress() throws Exception
 	  
 	     
-	  { Thread.sleep(3000);
+	  {
 		  
-		  // click on old ifr regi
-	    driver().findElement(By.xpath("//*[@id=\"heading1\"]/button/div/div[2]")).click();
-	    Thread.sleep(1000);
-	    driver().findElement(By.xpath("//*[@id=\"collapse1\"]/div/ul/li[1]/a")).click();
-	    Thread.sleep(1000);  
-	    
+	  Thread.sleep(3000);
+	  // click on old ifr regi
+    driver().findElement(By.xpath("//*[@id=\"heading2\"]/button/div/div[2]")).click();
+    Thread.sleep(1000);
+    driver().findElement(By.xpath("//*[@id=\"collapse2\"]/div/ul/li[1]/a")).click();
+    Thread.sleep(1000);  
 	    
 	   // claim details
 	    driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[1]/div[2]/div/ngx-select/div/div[2]/div/span[1]/span")).click();
@@ -31,7 +31,7 @@ public class Inprogressclaims extends Thanedlc
 	    driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[1]/div[3]/div/ngx-select/div/ngx-select-choices/ul/li[1]/a/span")).click();
 	    Thread.sleep(1000);
 	  //select claim no
-	    driver().findElement(By.xpath("//input[@placeholder='दावा क्रमांक']")).sendKeys("157/8Tue");
+	    driver().findElement(By.xpath("//input[@placeholder='दावा क्रमांक']")).sendKeys("27/2022");
 	    Thread.sleep(1000);
 	    driver().findElement(By.xpath("//*[@id=\"fix-box\"]/form/div/div[1]/div[4]/div/div/button")).click();
 	    Thread.sleep(3000);
@@ -209,15 +209,14 @@ public class Inprogressclaims extends Thanedlc
 	      
 	      
 	      //Boundary of Claimed Space
-	      driver().findElement(By.xpath("//input[@formcontrolname='to_the_East']")).sendKeys("123");  
-	      Thread .sleep(1000); 
-	      driver().findElement(By.xpath("//input[@formcontrolname='to_the_West']")).sendKeys("asdff");  
-	      Thread .sleep(1000); 
-	      driver().findElement(By.xpath("//input[@formcontrolname='to_the_North']")).sendKeys("123/-zx");  
-	      Thread .sleep(1000); 
-	      driver().findElement(By.xpath("//input[@formcontrolname='to_the_South']")).sendKeys("abcd123/-555");  
-	      Thread .sleep(1000); 
-	      
+	        driver().findElement(By.xpath("//input[@formcontrolname='to_the_East']")).sendKeys("Mandir");  
+	        Thread .sleep(1000); 
+	        driver().findElement(By.xpath("//input[@formcontrolname='to_the_West']")).sendKeys("school");  
+	        Thread .sleep(1000); 
+	        driver().findElement(By.xpath("//input[@formcontrolname='to_the_North']")).sendKeys("playground");  
+	        Thread .sleep(1000); 
+	        driver().findElement(By.xpath("//input[@formcontrolname='to_tuhe_South']")).sendKeys("River");  
+	        Thread .sleep(1000);   
 	      //remark
 	      driver().findElement(By.xpath("//textarea[@placeholder='शेरा']")).sendKeys("Your claim id not considersed because u are not submitted Claim within year limit (2000-2025)");  
 	      Thread .sleep(1000);

@@ -18,11 +18,11 @@ public class InprogressclaimsCFR extends Thanedlc
 			  driver().findElement(By.xpath("//*[@id=\"languagebox\"]/div/label[2]")).click();
 			    Thread.sleep(1000); 
 			    
-		  // click on old cfr regi
-	    driver().findElement(By.xpath("//*[@id=\"heading2\"]/button/div/div[2]")).click();
-	    Thread.sleep(1000);
-	    driver().findElement(By.xpath("//*[@id=\"collapse2\"]/div/ul/li[1]/a")).click();
-	    Thread.sleep(1000);  
+			    // click on old cfr regi
+			    driver().findElement(By.xpath("//*[@id=\"heading3\"]/button/div/div[2]")).click();
+			    Thread.sleep(1000);
+			    driver().findElement(By.xpath("//*[@id=\"collapse3\"]/div/ul/li[1]/a")).click();
+			    Thread.sleep(1000);  
 	  
 	    
 	    
@@ -36,10 +36,10 @@ public class InprogressclaimsCFR extends Thanedlc
 	    driver().findElement(By.xpath("//*[@id=\"content\"]/app-create-old-cfr-case/div[1]/div/div/div/div/div/div/form/div/div[1]/div[3]/div/ngx-select/div/ngx-select-choices/ul/li[2]/a/span")).click();
 	    Thread.sleep(1000);
 	  //select claim no
-	    driver().findElement(By.xpath("//input[@placeholder='Claim No']")).sendKeys("17000/R");
+	    driver().findElement(By.xpath("//input[@placeholder='Claim No']")).sendKeys("299thr9/R");
 	    Thread.sleep(1000);
 	    driver().findElement(By.xpath("//*[@id=\"content\"]/app-create-old-cfr-case/div[1]/div/div/div/div/div/div/form/div/div[1]/div[4]/div/div/button")).click();
-	    Thread.sleep(3000);
+	    Thread.sleep(5000);
 	    
 	    //claim date
 	    driver().findElement(By.xpath("//input[@placeholder='Claim Date']")).sendKeys("12/05/2017");  
@@ -98,7 +98,7 @@ public class InprogressclaimsCFR extends Thanedlc
 	    
 	    // basic details
 	    //Claimant name                                       
-	    driver().findElement(By.xpath("//input[@placeholder='Name of CFR Village']")).sendKeys(" TestCFRVILLAGE ");  
+	    driver().findElement(By.xpath("//input[@placeholder='Name of CFR Village']")).sendKeys(" TuesdayCFR ");  
 	    Thread .sleep(1000); 
 	    
 	  
@@ -138,20 +138,20 @@ public class InprogressclaimsCFR extends Thanedlc
 	      
 	   
 	      //Boundary of Claimed Space
-	      driver().findElement(By.xpath("//input[@placeholder='To The East']")).sendKeys("1m23");  
+	      driver().findElement(By.xpath("//input[@formcontrolname='to_The_East'][1]")).sendKeys("1m23");  
 	      Thread .sleep(1000); 
-	      driver().findElement(By.xpath("//input[@placeholder='To The West']")).sendKeys("as12dff");  
+	      driver().findElement(By.xpath("//input[@formcontrolname='to_The_West']")).sendKeys("as12dff");  
 	      Thread .sleep(1000); 
-	      driver().findElement(By.xpath("//input[@placeholder='To The North']")).sendKeys("123vg/-zx");  
+	      driver().findElement(By.xpath("//input[@formcontrolname='to_The_North']")).sendKeys("123vg/-zx");  
 	      Thread .sleep(1000); 
-	      driver().findElement(By.xpath("//input[@placeholder='To The South']")).sendKeys("abc/*d123/-555");  
+	      driver().findElement(By.xpath("//input[@formcontrolname='to_The_South']")).sendKeys("abc/*d123/-555");  
 	      Thread .sleep(1000); 
-	      
+	       
 	      //remark
 	      driver().findElement(By.xpath("//textarea[@placeholder='Remark']")).sendKeys("Your claim id not considered because u are not submitted Claim within year limit (2000-2025)");  
 	      Thread .sleep(2000);
 	      
-	      // create case
+	
 	      // create case
 	      driver().findElement(By.xpath("//*[@id=\"content\"]/app-create-old-cfr-case/div[1]/div/div/div/div/div/div/form/div/div[13]/div/button[2]")).click();  
 	      Thread .sleep(1000);

@@ -33,17 +33,21 @@ public class Thanedlc
 		 // driver.set(new EdgeDriver());
 	   
 	    driver().manage().window().maximize();
-		driver().navigate().to("http://trti.mahamining.com/login");
+		//driver().navigate().to("http://trti.mahamining.com/login");
+		driver().navigate().to("https://aadivanmitra.org/login");
+		
 		 Thread.sleep(1000);
 		
 	//Thane DLC login
 	
 		
-		driver().findElement(By.xpath("//*[@id=\"login\"]/div/div/div[2]/form/div/div[1]/div/input")).sendKeys("ThaneDLC");		  
-	
+//		driver().findElement(By.xpath("//*[@id=\"login\"]/div/div/div[2]/form/div/div[1]/div/input")).sendKeys("ThaneDLC");		  
+//	
+		 driver().findElement(By.xpath("//*[@id=\"login\"]/div/div/div[2]/form/div/div[1]/div/input")).sendKeys("NIT3333");	
 		
 		Thread .sleep(1000);
-	    driver().findElement(By.xpath("//*[@id=\"login\"]/div/div/div[2]/form/div/div[2]/div/div/input")).sendKeys("aneDLC@5959");
+	   // driver().findElement(By.xpath("//*[@id=\"login\"]/div/div/div[2]/form/div/div[2]/div/div/input")).sendKeys("aneDLC@5959");
+	    driver().findElement(By.xpath("//*[@id=\"login\"]/div/div/div[2]/form/div/div[2]/div/div/input")).sendKeys("T3333@5585");
 	  Thread .sleep(1000);	
 	  String s=JOptionPane.showInputDialog(" Please Enter Captcha");
 	    
@@ -56,7 +60,7 @@ public class Thanedlc
 	  
 	
 	 }
-	        public WebDriver driver()
+	     public WebDriver driver()
 	 {
 		 return driver.get();
 	 }

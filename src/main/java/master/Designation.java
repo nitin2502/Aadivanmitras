@@ -10,6 +10,8 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.Assert;
 
 import com.google.common.io.Files;
 
@@ -19,9 +21,9 @@ public class Designation {
 
 	public static void main(String[] args) throws InterruptedException, IOException
 	{
-		WebDriverManager.chromedriver().setup();
-	    WebDriver driver= new ChromeDriver();
-	    driver.get("https://trti.mahamining.com/login");
+		WebDriverManager.edgedriver().setup();
+	    WebDriver driver= new EdgeDriver();
+	    driver.get("https://aadivanmitra.org/login");
 		driver.manage().window().maximize();
 		Thread .sleep(1000);
 		//Admin login
@@ -78,7 +80,11 @@ public class Designation {
 		//click on delete button
 		driver.findElement(By.xpath("//*[@id=\"content\"]/app-designation/div/div/div/div/div[2]/div/div[2]/div/table/tbody/tr[1]/td[4]/button[2]/i")).click();
 		Thread .sleep(2000);
+		String alertMessage = driver.switchTo().alert().getText();
 		driver.switchTo().alert().accept();
+		System.out.println(alertMessage);
+		String Exp="Are you sure you want to delete this record?";
+		Assert.assertEquals(alertMessage,Exp);
 		//take a screenshot
 		Thread .sleep(2000); 
 		 File  scr =((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);

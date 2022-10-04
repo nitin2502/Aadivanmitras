@@ -4,18 +4,24 @@ import java.io.File;
 import javax.swing.JOptionPane;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 
 import com.google.common.io.Files;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class User_VFRC {
 	public static void main(String[] args) throws Exception 
 	{
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\niting\\eclipse-workspace\\Aadivanmitras\\Driver\\chromedriver.exe");
+		WebDriverManager.chromedriver().setup();
 	    WebDriver driver= new ChromeDriver();
+	     String alertMessage="";
+	  
 	    driver.get("http://trti.mahamining.com/login");
 		driver.manage().window().maximize();
 		//admin login
@@ -31,17 +37,29 @@ public class User_VFRC {
 	  	driver.findElement(By.xpath("//*[@id=\"login\"]/div/div/div[2]/form/div/div[5]/button")).click();
 	  	Thread .sleep(1000);
 	  	
+	 
+	  	
 	  //Selection of master
   		driver.findElement(By.xpath("//*[@id=\"heading1\"]/button/div/div[2]")).click();
   		Thread .sleep(1000);
 		
+  		
+  		
+  		
 		driver.findElement(By.xpath("/html/body/app-root/app-layout/div/app-sidebar/nav/app-admin-menu/div/div[2]/div/div/ul/li[4]/a")).click();
 		Thread .sleep(1000);
 		//select committee
 		driver.findElement(By.xpath("//*[@id=\"content\"]/app-user-register/div[1]/div/div/div/div[1]/form/div/div/div[1]/div/div[1]/div/ngx-select/div/div[2]/div/span[1]/span")).click();
 		Thread .sleep(1000); 
 		driver.findElement(By.xpath("//*[@id=\"content\"]/app-user-register/div[1]/div/div/div/div[1]/form/div/div/div[1]/div/div[1]/div/ngx-select/div/ngx-select-choices/ul/li[6]/a/span")).click();
-		Thread .sleep(1000); 
+		Thread .sleep(1000);
+		
+		Actions a = new Actions(driver);
+	  	  //scroll down a page
+	  	  a.sendKeys(Keys.PAGE_DOWN).build().perform();
+	  	  //scroll up a page
+	  	  
+	  	  
 		//select division
 		driver.findElement(By.xpath("//*[@id=\"content\"]/app-user-register/div[1]/div/div/div/div[1]/form/div/div/div[1]/div/div[3]/div/ngx-select/div/div[2]/div/span[1]/span")).click();
 		Thread .sleep(1000); 
@@ -109,7 +127,7 @@ public class User_VFRC {
 				Thread .sleep(1000);	
 				driver.findElement(By.xpath("//input[@placeholder='वापरकर्त्याचे नाव प्रविष्ट करा']")).sendKeys("abcdefghh");
 				Thread .sleep(1000);	
-				driver.findElement(By.xpath("//button[@class='btn btn-main'][1]")).click();
+				driver.findElement(By.xpath("//*[@id=\"content\"]/app-user-register/div[1]/div/div/div/div[1]/form/div/div/div[1]/div/div[14]/div/div/button")).click();
 				Thread .sleep(1000);	
 			
 				
@@ -137,7 +155,9 @@ public class User_VFRC {
 				//delete record
 				driver.findElement(By.xpath("//*[@id=\"content\"]/app-user-register/div[1]/div/div/div/div[2]/div/div[2]/div/table/tbody/tr[1]/td[6]/div/button[2]/i")).click();
 				Thread .sleep(1000);
+				alertMessage = driver.switchTo().alert().getText();
 				driver.switchTo().alert().accept();
+				System.out.println(alertMessage);
 				Thread .sleep(1000);
 				// takes screenshot
 				//only mobNo change user register from can accept all details
